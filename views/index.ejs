@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Esse3'}); %>
+<body>
+<div class="container">
+    <h2>Esse3</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="matricola">Matricola:</label>
+            <input type="number" class="form-control" name="matricolaLogin" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control"  name="passwordLogin" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+        <%- include('partials/error.ejs', {action: 'login'})%>
+    </form>
+</div>
+
+
+</body>
+</html>

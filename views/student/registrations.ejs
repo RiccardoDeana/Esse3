@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Iscrizioni'}); %>
+<body>
+
+<div class="btn-group btn-group-lg w-100 p-3">
+    <button class="btn btn-primary" href="/exams">Prenota Esame</button>
+    <button class="btn btn-primary active">Iscrizioni</button>
+    <button class="btn btn-primary" href="/passed">Libretto</button>
+</div>
+<div class="container w-100">
+    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
+</div>
+
+<div class="container">
+    <h2>Iscrizioni</h2>
+    <%- include('partials/error.ejs', {action: 'registration'})%>
+    <% if(iscrizioni.length == 0) {%>
+        <h2>Nessuna iscrizione effettuata</h2>
+    <% } %>
+    <% for(var i=0; i < iscrizioni.length; i++) {%>
+    <div class="container border border-primary rounded" id=<%=iscrizioni[i]._id%> >
+        <h2> <%= iscrizioni[i].nomeEsame %> </h2>
+        <h4> <%= iscrizioni[i].data.getDate() %>/<%= esami[i].data.getMonth() + 1 %>/<%= esami[i].data.getFullYear() %> </h4>
+    </div>
+    <% } %>
+</div>
+
+</body>
+</html>

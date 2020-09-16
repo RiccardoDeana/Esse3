@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Rimuovi studente'}); %>
+<body>
+
+<div class="btn-group btn-group-lg w-100 p-3">
+    <button class="btn btn-primary" href="/addStudent">Aggiungi Studente</button>
+    <button class="btn btn-primary active">Rimuovi Studente</button>
+    <button class="btn btn-primary" href="/addExam">Aggiungi Esame</button>
+    <button class="btn btn-primary" href="/regGrade">Registra Voto</button>
+</div>
+
+<div class="container w-100">
+    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
+</div>
+
+
+
+<div class="container">
+    <h2>Rimuovi studente</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="matricola">Matricola:</label>
+            <input type="number" class="form-control" name="matricolaRimuoviStudente" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Rimuovi</button>
+        </div>
+        <%- include('partials/error.ejs', {action: 'remStudent'})%>
+    </form>
+</div>
+
+</body>
+</html>

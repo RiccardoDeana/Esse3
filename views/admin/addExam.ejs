@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Aggiungi esame'}); %>
+<body>
+
+<div class="btn-group btn-group-lg w-100 p-3">
+    <button class="btn btn-primary" href="/addStudent">Aggiungi Studente</button>
+    <button class="btn btn-primary" href="/remStudent">Rimuovi Studente</button>
+    <button class="btn btn-primary active">Aggiungi Esame</button>
+    <button class="btn btn-primary" href="/regGrade">Registra Voto</button>
+</div>
+
+<div class="container w-100">
+    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
+</div>
+
+
+
+<div class="container">
+    <h2>Aggiungi esame</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="esame">Esame:</label>
+            <input type="text" class="form-control" name="esameAggiungiEsame" required>
+        </div>
+        <div class="form-group">
+            <label for="facolta">Facoltà:</label>
+            <select class="form-control" name="facoltaAggiungiEsame" required>
+                <option disabled selected value> -- selezionare una facoltà -- </option>
+                <option value="ingegneria">Ingegneria</option>
+                <option value="medicina">Medicina</option>
+                <option value="lettere">Lettere</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" class="form-control"  name="dataAggiungiEsame" required>
+        </div>
+        <div class="form-group">
+            <label for="posti">Numero posti:</label>
+            <input type="number" class="form-control" name="postiAggiungiEsame" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Aggiungi</button>
+        </div>
+        <%- include('partials/error.ejs', {action: 'addExam'})%>
+    </form>
+</div>
+
+</body>
+</html>

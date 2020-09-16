@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Prenota esame'}); %>
+<body>
+
+<div class="btn-group btn-group-lg w-100 p-3">
+    <button class="btn btn-primary" active>Prenota Esame</button>
+    <button class="btn btn-primary" href="/registrations">Prenotazioni</button>
+    <button class="btn btn-primary" href="/passed">Libretto</button>
+</div>
+<div class="container w-100">
+    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
+</div>
+
+
+<div class="container">
+
+    <h2>Prenota Esame</h2>
+    <%- include('partials/error.ejs', {action: 'registration'})%>
+    <% for(var i=0; i < esami.length; i++) {%>
+    <div class="container border border-primary rounded" id=<%=esami[i]._id%> >
+        <form method="post">
+            <h2> <%= esami[i].nome %> </h2>
+            <input type="hidden" name="idPrenota" value=<%= esami[i]._id%>>
+            <input type="hidden" name="nomePrenota" value=<%= esami[i].nome%>>
+            <input type="hidden" name="studentePrenota" value=<%= locals.matricola%>>
+            <input type="hidden" name="dataPrenota" value="<%= esami[i].data%>">
+            <button type="submit" class="btn btn-primary float-right">Iscricviti</button>
+            <h4> <%= esami[i].data.getDate() %>/<%= esami[i].data.getMonth() + 1 %>/<%= esami[i].data.getFullYear() %> </h4>
+            <h4> Posti: <%= esami[i].postiLiberi %> / <%= esami[i].postiTot %> </h4>
+
+        </form>
+    </div>
+    <% } %>
+
+</div>
+
+</body>
+</html>

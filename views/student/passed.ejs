@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'Libretto'}); %>
+<body>
+
+<div class="btn-group btn-group-lg w-100 p-3">
+    <button class="btn btn-primary" href="/exams">Prenota Esame</button>
+    <button class="btn btn-primary" href="/registrations">Iscrizioni</button>
+    <button class="btn btn-primary active">Libretto</button>
+</div>
+<div class="container w-100">
+    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
+</div>
+
+<div class="container">
+    <h2>Libretto</h2>
+    <% if(libretto.length == 0) {%>
+        <h2>Nessun voto registrato</h2>
+    <% } %>
+    <% for(var i=0; i < libretto.length; i++) {%>
+    <div class="container border border-primary rounded" id=<%=libretto[i]._id%> >
+        <h2> <%= libretto[i].esame %> </h2>
+        <h4> Valutazione: <%= libretto[i].voto %> </h4>
+    </div>
+    <% } %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+const mongoose = require('mongoose');
+
+const passedSchema = mongoose.Schema({
+        esame: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        studente: {
+            type: Number,
+            required: true,
+            trim: true
+        },
+        voto: {
+            type: Number,
+            required: true,
+            min: 18,
+            max: 30,
+            trim: true
+        },
+        lode:  {
+            type: Boolean,
+            required: true,
+            validate: {
+                validator: function(){
+                    return !(this.lode == true && this.voto != 30);
+                }
+            }
+        }
+    },
+    {
+        collection: 'superati'
+    });
+
+passedSchema.index({nome: 1, studente: 1}, {unique: true});
+
+
+passedSchema.statics.findMyPassed = async (matricola) => {
+    const passedExams = await Passed.find({sudente: matricola});
+    return passedExams;
+};
+/*
+passedSchema.statics.findMyPassed = function (matricola) {
+    return passedExams
+        .find({sudente: matricola})
+        .exec()
+        .then(passed => {
+            if(passed){
+                return passed;
+            }
+        });
+};*/
+
+const Passed = mongoose.model('Passed', passedSchema);
+
+module.exports = Passed;

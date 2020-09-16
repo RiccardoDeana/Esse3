@@ -4,10 +4,10 @@
 <body>
 
 <div class="btn-group btn-group-lg w-100 p-3">
-    <button class="btn btn-primary" href="/addStudent">Aggiungi Studente</button>
-    <button class="btn btn-primary" href="/remStudent">Rimuovi Studente</button>
-    <button class="btn btn-primary active">Aggiungi Esame</button>
-    <button class="btn btn-primary" href="/regGrade">Registra Voto</button>
+    <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
+    <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
+    <a class="btn btn-primary active">Aggiungi Esame</a>
+    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
 </div>
 
 <div class="container w-100">
@@ -20,12 +20,12 @@
     <h2>Aggiungi esame</h2>
     <form method="post">
         <div class="form-group">
-            <label for="esame">Esame:</label>
-            <input type="text" class="form-control" name="esameAggiungiEsame" required>
+            <label for="nome">Esame:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
         </div>
         <div class="form-group">
             <label for="facolta">Facoltà:</label>
-            <select class="form-control" name="facoltaAggiungiEsame" required>
+            <select class="form-control" name="facolta" id="facolta" required>
                 <option disabled selected value> -- selezionare una facoltà -- </option>
                 <option value="ingegneria">Ingegneria</option>
                 <option value="medicina">Medicina</option>
@@ -34,11 +34,11 @@
         </div>
         <div class="form-group">
             <label for="data">Data:</label>
-            <input type="date" class="form-control"  name="dataAggiungiEsame" required>
+            <input type="date" class="form-control" id="data" name="data" required>
         </div>
         <div class="form-group">
             <label for="posti">Numero posti:</label>
-            <input type="number" class="form-control" name="postiAggiungiEsame" required>
+            <input type="number" class="form-control" id="posti" name="posti" required>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Aggiungi</button>

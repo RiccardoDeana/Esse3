@@ -4,10 +4,10 @@
 <body>
 
 <div class="btn-group btn-group-lg w-100 p-3">
-    <button class="btn btn-primary" href="/addStudent">Aggiungi Studente</button>
-    <button class="btn btn-primary active">Rimuovi Studente</button>
-    <button class="btn btn-primary" href="/addExam">Aggiungi Esame</button>
-    <button class="btn btn-primary" href="/regGrade">Registra Voto</button>
+    <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
+    <a class="btn btn-primary active">Rimuovi Studente</a>
+    <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
+    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
 </div>
 
 <div class="container w-100">
@@ -21,7 +21,7 @@
     <form method="post">
         <div class="form-group">
             <label for="matricola">Matricola:</label>
-            <input type="number" class="form-control" name="matricolaRimuoviStudente" required>
+            <input type="number" class="form-control" id="matricola" name="matricola" required>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Rimuovi</button>

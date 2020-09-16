@@ -4,10 +4,10 @@
 <body>
 
 <div class="btn-group btn-group-lg w-100 p-3">
-    <button class="btn btn-primary active">Aggiungi Studente</button>
-    <button class="btn btn-primary" href="/remStudent">Rimuovi Studente</button>
-    <button class="btn btn-primary" href="/addExam">Aggiungi Esame</button>
-    <button class="btn btn-primary" href="/regGrade">Registra Voto</button>
+    <a class="btn btn-primary active">Aggiungi Studente</a>
+    <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
+    <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
+    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
 </div>
 
 <div class="container w-100">
@@ -23,20 +23,20 @@
         <div class="form-row">
             <div class="col">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" name="nomeAggiungiStudente" required>
+                <input type="text" class="form-control" id="nome" name="nome" required>
             </div>
             <div class="col">
                 <label for="cognome">Cognome:</label>
-                <input type="text" class="form-control"  name="cognomeAggiungiStudente" required>
+                <input type="text" class="form-control" id="cognome" name="cognome" required>
             </div>
         </div>
         <div class="form-group">
             <label for="matricola">Matricola:</label>
-            <input type="number" class="form-control" name="matricolaAggiungiStudente" required>
+            <input type="number" class="form-control" id="matricola" name="matricola" required>
         </div>
         <div class="form-group">
             <label for="facolta">Facoltà:</label>
-            <select class="form-control" name="facoltaAggiungiStudente"  required>
+            <select class="form-control" id="facolta" name="facolta"  required>
                 <option disabled selected value> -- selezionare una facoltà -- </option>
                 <option value="ingegneria">Ingegneria</option>
                 <option value="medicina">Medicina</option>
@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control"  name="passwordAggiungiStudente"  required>
+            <input type="password" class="form-control"  id="password" name="password"  required>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Aggiungi</button>

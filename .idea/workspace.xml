@@ -20,10 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="modifiche a file ejs">
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/configClearError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/passed.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/passed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/student/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/student/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/student/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/student" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/middelware" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,9 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views" />
@@ -81,7 +101,8 @@
       <workItem from="1600270229077" duration="3495000" />
       <workItem from="1600285228037" duration="907000" />
       <workItem from="1600290523679" duration="1501000" />
-      <workItem from="1600323884330" duration="2294000" />
+      <workItem from="1600323884330" duration="16586000" />
+      <workItem from="1600460765761" duration="13224000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -97,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600271351355</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modifiche a file ejs">
+      <created>1600326358452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600326358452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,13 +150,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="modifiche a file ejs" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600271354507">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600326364526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600271354507" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1600472232545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600472232545" />
   </component>
 </project>

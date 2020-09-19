@@ -34,11 +34,13 @@ const passedSchema = mongoose.Schema({
 
 passedSchema.index({nome: 1, studente: 1}, {unique: true});
 
-
+/*
 passedSchema.statics.findMyPassed = async (matricola) => {
     const passedExams = await Passed.find({sudente: matricola});
     return passedExams;
-};
+};*/
+
+
 /*
 passedSchema.statics.findMyPassed = function (matricola) {
     return passedExams

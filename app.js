@@ -1,17 +1,23 @@
 const express = require('express');
 const path = require('path');
+
 const bodyParser = require('body-parser');
 const app = express();
 require('./db');
 
 const port = process.env.PORT;
+
+const indexController = require('./controllers/indexController');
+const indexRouter = require('./routers/index')(indexController);
 /*
 const indexRoutesController = require('./controllers/indexRoutesController');
 const usersRoutesController = require('./controllers/usersRoutesController');
 
-app.use('/', indexRoutes);
+
 app.use('/utenti', usersRoutes);
 */
+app.use('/', indexRouter);
+app.use('/login', indexRouter);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -25,7 +31,7 @@ app.use(function (req, res, next) {
     next(err);
 });
 
-app.use(function (err, req, res) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     //res.locals.error = req.app.get('env') === 'development' ? err : {};

@@ -44,18 +44,10 @@ const adminSchema = mongoose.Schema({
 
 adminSchema.pre('save', async function (next) {
     const admin = this;
-    bcrypt.hash(admin.password, 8)
-        .then((hash) => {
-            admin.password = hash;
-            next();
-        })
-        .catch((error) => next(error));
-    /*
-    const admin = this;
     if (admin.isModified('password')) {
         admin.password = await bcrypt.hash(admin.password, 8)
     }
-    next()*/
+    next()
 });
 
 adminSchema.methods.generateAuthToken = async function() {

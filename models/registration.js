@@ -27,11 +27,11 @@ const registrationSchema = mongoose.Schema({
 
 registrationSchema.index({idEsame: 1, studente: 1, data: 1}, {unique: true});
 
-
+/*
 registrationSchema.statics.findMyRegistrations = async (matricola) => {
     const registrations = await Registration.find({studente: matricola});
     return registrations;
-};
+};*/
 
 
 const Registration = mongoose.model('Registration', registrationSchema);

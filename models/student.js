@@ -55,14 +55,12 @@ studentSchema.pre('save', async function (next) {
     next()
 });*/
 
-studentSchema.pre('save', function (next) {
+studentSchema.pre('save', async function (next) {
     const student = this;
-    bcrypt.hash(student.password, 8)
-        .then((hash) => {
-            student.password = hash;
-            next();
-        })
-        .catch((error) => next(error));
+    if (student.isModified('password')) {
+        student.password = await bcrypt.hash(student.password, 8)
+    }
+    next()
 });
 
 studentSchema.methods.generateAuthToken = async function() {
@@ -74,7 +72,8 @@ studentSchema.methods.generateAuthToken = async function() {
 };
 
 studentSchema.statics.findByCredentials = async (matricola, password) => {
-    const student = await Admin.findOne({matricola});
+    const student = await Student.findOne({matricola});
+
     if (student) {
         const isPasswordMatch = await bcrypt.compare(password, student.password);
         if (isPasswordMatch) {
@@ -82,13 +81,13 @@ studentSchema.statics.findByCredentials = async (matricola, password) => {
         }
     }
 };
-
+/*
 studentSchema.statics.findByMatricola = async (matricola) => {
-    const student = await Admin.findOne({matricola});
+    const student = await Student.findOne({matricola});
     if (student) {
         return student;
     }
-};
+};*/
 /*
 studentSchema.statics.findByCredentials = async (matricola, password) => {
     const student = await Student.findOne({matricola});

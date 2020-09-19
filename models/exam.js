@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+//const Registration = require('registration');
+//const Passed = require('passed');
 
 const examSchema = mongoose.Schema({
         nome: {
@@ -40,8 +42,10 @@ examSchema.index({nome: 1, facolta: 1, data: 1}, {unique: true});
 //};
 
 
-examSchema.statics.findMyExams = async (m, f) => {
-    const exams = await Exam.find({facolta: f});
+examSchema.statics.findMyExams = async (matricola, facolta) => {
+    //const myPassed = await  Passed.find({studente: matricola}); //'nome' non in 'esame'
+    //const registrations = await  Registration.find({studente: matricola}); //'_id' non in 'idEsame'
+    const exams = await Exam.find({facolta: facolta});
     return exams;
 };
 /*

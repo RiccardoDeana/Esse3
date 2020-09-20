@@ -42,7 +42,7 @@ async function firstPage (req, res, next) {
 }
 
 function loginPage (req, res, next) {
-    res.render('./login');
+    res.render('login');
 }
 
 module.exports = {

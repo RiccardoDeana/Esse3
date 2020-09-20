@@ -3,6 +3,7 @@ const Student = require('../models/student');
 
 function isLoggedStudent (req, res, next) {
     const token = req.app.locals.token;
+    //console.log(token);
     const data = jwt.verify(token, process.env.JWT_KEY);
     const student = Student.findOne({ _id: data._id, 'tokens.token': token });
     if (student) {

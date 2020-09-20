@@ -33,84 +33,59 @@ const examSchema = mongoose.Schema({
 
 examSchema.index({nome: 1, facolta: 1, data: 1}, {unique: true});
 
-//examSchema.statics.findByNomeFacolta = async (n, f, d) => {
-//    const exam = await Exam.findOne({nome: n, facolta: f, data: d});
-//    if (!exam) {
-//        throw new Error({ error: 'Esame non esiste' })
-//    }
-//    return exam;
-//};
-
-
 examSchema.statics.findMyExams = async (matricola, facolta) => {
+
     const myPassed = await  Passed.find({studente: matricola});
     const PassedNames = myPassed.map(function(passed){
         return passed.esame;
     });
+
     const registrations = await  Registration.find({studente: matricola});
     const idRegistrations = registrations.map(function(registration){
         return registration.idEsame;
     });
+
     const exams = await Exam.find({facolta: facolta});
+
     const notRegistered = exams.filter(function(exam){
-        return exam._id in idRegistrations === false;
+        const id = exam._id.toString();
+        return !(idRegistrations.includes(id));
     });
+
     const notRegisteredAndPassed = notRegistered.filter(function(exam){
-        return exam.nome in PassedNames === false;
+        const nome = exam.nome.toString();
+        return !(PassedNames.includes(nome));
     });
+
     return notRegisteredAndPassed;
 };
-/*
-examSchema.statics.findMyExams = function (matricola, facolta) {
-    return Exams
-        .find({facolta: facolta})
-        .exec()
-        .then(exams => {
-            if(exams){
-                return exams;
-            }
-        });
-};*/
 
-/*
 examSchema.statics.decreaseFree = async (id) => {
-
     const exam = await Exam.findOne({_id: id}, function(err, doc){
-        if(err){
-            throw new Error({ error: 'Esame non esiste' })
+        if(doc.postiLiberi > 0){
+            doc.postiLiberi--;
+            doc.save();
         }
-        if(!doc){
-            throw new Error({ error: 'Esame non esiste' })
-        }
-        if(doc.postiLiberi == 0){
-            return res.status(401).send({error: 'Posti esauriti.'})
-        }
-
-        doc.postiLiberi--;
-        doc.save();
     });
+    if (exam.postiLiberi > 0){
+        return exam;
+    }else{
+        return undefined;
+    }
+};
 
-    return exam;
-};*/
-
-examSchema.statics.decreaseFree = function (id) {
-
-    const exam = Exam.findOne({_id: id}, function(err, doc){
-        if(err){
-            return res.status(401).send({error: 'Errore di accesso al database'});
+examSchema.statics.increaseFree = async (id) => {
+    const exam = await Exam.findOne({_id: id}, function(err, doc){
+        if(doc.postiLiberi < doc.postiTot){
+            doc.postiLiberi++;
+            doc.save();
         }
-        if(!doc){
-            return res.status(401).send({error: 'Esame inesistente'});
-        }
-        if(doc.postiLiberi == 0){
-            return res.status(401).send({error: 'Posti esauriti'});
-        }
-
-        doc.postiLiberi--;
-        doc.save();
     });
+    if (exam.postiLiberi < exam.postiTot){
 
-    return exam;
+    }else{
+        return undefined;
+    }
 };
 
 const Exam = mongoose.model('Exam', examSchema);

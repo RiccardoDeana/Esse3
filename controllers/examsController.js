@@ -1,5 +1,6 @@
 const Student = require('../models/student');
 const Exam = require('../models/exam');
+const Registration = require('../models/registration');
 
 function examsGET (req, res, next) {
     const matricola = req.app.locals.matricola;
@@ -8,7 +9,8 @@ function examsGET (req, res, next) {
             facolta = student.facolta;
             Exam.findMyExams(matricola, facolta)
                 .then((exams) => {
-                    res.render('./exams', {esami: exams});
+                    req.app.locals.myExams = exams;
+                    res.render('exams');
                 })
                 .catch(error => {
                     next(error);
@@ -20,16 +22,30 @@ function examsGET (req, res, next) {
 }
 
 function examsPOST (req, res, next) {
-
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
-    Exam.decreaseFree(dati._idEsame)
-        .then(exam => {
-            const registration = new Registration(dati)
-            registration.save()
-        })
-        .then(() => res.redirect('/exams'))
-        .catch(error => next(error));
+    const id = dati.idEsame;
+    Exam.decreaseFree(id).then(exam => {
+        if(exam){
+            const registration = new Registration(dati);
+            registration.save(function(err){
+                if(err){
+                    Exam.increaseFree(id).then(() =>{
+                        const error = new Error('prenotazione già effettuata');
+                        error.status = 401;
+                        return next(error);
+                    });
+                }else{
+                    res.redirect('/exams');
+                }
+            });
+
+        }else{
+            const error = new Error('posti esauriti');
+            error.status = 401;
+            return next(error);
+        };
+    });
 }
 
 module.exports = {

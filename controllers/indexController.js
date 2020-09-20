@@ -1,30 +1,5 @@
 const Student = require('../models/student');
 const Admin = require('../models/admin');
-const Exam = require('../models/exam');
-const Passed = require('../models/passed');
-const Registration = require('../models/registration');
-
-function examsPage (req, res, next) {
-    const matricola = req.app.locals.matricola;
-    Student.findOne({matricola})
-        .then((student) => {
-            facolta = student.facolta;
-            Exam.findMyExams(matricola, facolta)
-                .then((exams) => {
-                    res.render('./exams', {esami: exams});
-                })
-                .catch(error => {
-                    next(error);
-                });
-        })
-        .catch(error => {
-            next(error);
-        });
-}
-
-function addStudentPage (req, res, next) {
-    res.render('./addStudent');
-}
 
 async function firstPage (req, res, next) {
     try {
@@ -52,9 +27,9 @@ async function firstPage (req, res, next) {
         }
 
         if(studentToken) {
-            examsPage(req, res, next);
+            res.redirect('/exams');
         }else if(adminToken){
-            addStudentPage(req, res, next);
+            res.redirect('/addStudent');
         }else{
             const error = new Error('Matricola o password errati');
             error.status = 401;
@@ -71,8 +46,6 @@ function loginPage (req, res, next) {
 }
 
 module.exports = {
-    examsPage,
-    addStudentPage,
     loginPage,
     firstPage
 };

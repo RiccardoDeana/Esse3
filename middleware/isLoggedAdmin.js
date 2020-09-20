@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const Admin = require('../models/admin');
 
 function isLoggedAdmin (req, res, next) {
-    const token = req.body.token;
+    const token = req.app.locals.token;
     const data = jwt.verify(token, process.env.JWT_KEY);
     const admin = Admin.findOne({ _id: data._id, 'tokens.token': token });
     if (admin) {
@@ -17,7 +17,7 @@ function isLoggedAdmin (req, res, next) {
                 }
             });
         req.app.locals.error = target;
-        res.redirect('/');
+        res.redirect('/login');
     }
 }
 

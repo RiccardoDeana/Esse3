@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const Student = require('../models/student');
 
 function isLoggedStudent (req, res, next) {
-    const token = req.body.token;
+    const token = req.app.locals.token;
     const data = jwt.verify(token, process.env.JWT_KEY);
     const student = Student.findOne({ _id: data._id, 'tokens.token': token });
     if (student) {
@@ -17,7 +17,7 @@ function isLoggedStudent (req, res, next) {
                 }
             });
         req.app.locals.error = target;
-        res.redirect('/');
+        res.redirect('/login');
     }
 }
 

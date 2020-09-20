@@ -19,29 +19,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="modifiche a file ejs">
-      <change afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/configClearError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/index.js" afterDir="false" />
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="qualcosa funziona">
+      <change afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/addExamRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/addStudentRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/examsRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/passedRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/regGradeRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/registrationsRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/remStudentRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configClearError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configClearError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/passed.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/passed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/student/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/student/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/student/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,9 @@
       <workItem from="1600285228037" duration="907000" />
       <workItem from="1600290523679" duration="1501000" />
       <workItem from="1600323884330" duration="16586000" />
-      <workItem from="1600460765761" duration="13224000" />
+      <workItem from="1600460765761" duration="17279000" />
+      <workItem from="1600479878133" duration="9000" />
+      <workItem from="1600511120282" duration="5873000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -125,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600326358452</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="qualcosa funziona">
+      <created>1600474244212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600474244212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,14 +159,15 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Primo commit" />
     <MESSAGE value="modifiche a file ejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifiche a file ejs" />
+    <MESSAGE value="qualcosa funziona" />
+    <option name="LAST_COMMIT_MESSAGE" value="qualcosa funziona" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600326364526">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600474256968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600271354507" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600474256968" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -163,5 +176,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600472232545" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600614722565">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600614722565" />
   </component>
 </project>

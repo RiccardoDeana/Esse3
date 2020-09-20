@@ -4,26 +4,41 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 require('./db');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const port = process.env.PORT;
 
 const indexController = require('./controllers/indexController');
-const indexRouter = require('./routers/index')(indexController);
-/*
-const indexRoutesController = require('./controllers/indexRoutesController');
-const usersRoutesController = require('./controllers/usersRoutesController');
+const examsController = require('./controllers/examsController');
+const addStudentController = require('./controllers/addStudentController');
+//const addExamController = require('./controllers/addExamController');
+//const remStudentController = require('./controllers/remStudentController');
+//const passedController = require('./controllers/passedController');
+//const regGradeController = require('./controllers/regGradeController');
+//const registrationsController = require('./controllers/registrationsController');
+
+const indexRouter = require('./routers/indexRouter')(indexController);
+const examsRouter = require('./routers/examsRouter')(examsController);
+const addStudentRouter = require('./routers/addStudentRouter')(addStudentController);
+//const addExamRouter = require('./routers/addExamRouter')(addExamController);
+//const remStudenteRouter = require('./routers/remStudenteRouter')(remStudentController);
+//const passedRouter = require('./routers/passedRouter')(passedController);
+//const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
+//const registrationsRouter = require('./routers/registrationsRouter')(registrationsController);
 
 
-app.use('/utenti', usersRoutes);
-*/
-app.use('/', indexRouter);
-app.use('/login', indexRouter);
+app.use(indexRouter);
+app.use(examsRouter);
+app.use(addStudentRouter);
+//app.use(addExamRouter);
+//app.use(remStudenteRouter);
+//app.use(passedRouter);
+//app.use(regGradeRouter);
+//app.use(registrationsRouter);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
     let err = new Error('Not Found');

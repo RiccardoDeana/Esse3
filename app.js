@@ -16,7 +16,7 @@ const addStudentController = require('./controllers/addStudentController');
 //const remStudentController = require('./controllers/remStudentController');
 //const passedController = require('./controllers/passedController');
 //const regGradeController = require('./controllers/regGradeController');
-//const registrationsController = require('./controllers/registrationsController');
+const registrationsController = require('./controllers/registrationsController');
 
 const indexRouter = require('./routers/indexRouter')(indexController);
 const examsRouter = require('./routers/examsRouter')(examsController);
@@ -25,7 +25,7 @@ const addStudentRouter = require('./routers/addStudentRouter')(addStudentControl
 //const remStudenteRouter = require('./routers/remStudenteRouter')(remStudentController);
 //const passedRouter = require('./routers/passedRouter')(passedController);
 //const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
-//const registrationsRouter = require('./routers/registrationsRouter')(registrationsController);
+const registrationsRouter = require('./routers/registrationsRouter')(registrationsController);
 
 
 app.use(indexRouter);
@@ -35,7 +35,7 @@ app.use(addStudentRouter);
 //app.use(remStudenteRouter);
 //app.use(passedRouter);
 //app.use(regGradeRouter);
-//app.use(registrationsRouter);
+app.use(registrationsRouter);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

@@ -14,14 +14,18 @@
 
 <div class="container">
     <h2>Iscrizioni</h2>
-    <%- include('partials/error.ejs', {action: 'registration'})%>
-    <% if(iscrizioni.length == 0) {%>
-        <h2>Nessuna iscrizione effettuata</h2>
+    <%- include('partials/error.ejs', {action: 'registrations'})%>
+    <% if(locals.myRegistrations.length == 0) {%>
+        <h2 class="text-center">Nessuna iscrizione effettuata</h2>
     <% } %>
-    <% for(var i=0; i < iscrizioni.length; i++) {%>
-    <div class="container border border-primary rounded" id=<%=iscrizioni[i]._id%> >
-        <h2> <%= iscrizioni[i].nomeEsame %> </h2>
-        <h4> <%= iscrizioni[i].data.getDate() %>/<%= esami[i].data.getMonth() + 1 %>/<%= esami[i].data.getFullYear() %> </h4>
+    <% for(var i=0; i < locals.myRegistrations.length; i++) {%>
+    <div class="container border border-primary rounded" id=<%=locals.myRegistrations[i]._id%> >
+        <form method="post">
+            <h2> <%= locals.myRegistrations[i].nomeEsame %> </h2>
+            <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
+            <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
+            <h4> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h4>
+        </form>
     </div>
     <% } %>
 </div>

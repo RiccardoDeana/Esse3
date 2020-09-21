@@ -35,12 +35,12 @@ examSchema.index({nome: 1, facolta: 1, data: 1}, {unique: true});
 
 examSchema.statics.findMyExams = async (matricola, facolta) => {
 
-    const myPassed = await  Passed.find({studente: matricola});
+    const myPassed = await Passed.find({studente: matricola});
     const PassedNames = myPassed.map(function(passed){
         return passed.esame;
     });
 
-    const registrations = await  Registration.find({studente: matricola});
+    const registrations = await Registration.find({studente: matricola});
     const idRegistrations = registrations.map(function(registration){
         return registration.idEsame;
     });
@@ -62,6 +62,9 @@ examSchema.statics.findMyExams = async (matricola, facolta) => {
 
 examSchema.statics.decreaseFree = async (id) => {
     const exam = await Exam.findOne({_id: id}, function(err, doc){
+        if(err){
+            return null;
+        }
         if(doc.postiLiberi > 0){
             doc.postiLiberi--;
             doc.save();
@@ -70,21 +73,25 @@ examSchema.statics.decreaseFree = async (id) => {
     if (exam.postiLiberi > 0){
         return exam;
     }else{
-        return undefined;
+        return null;
     }
 };
 
 examSchema.statics.increaseFree = async (id) => {
     const exam = await Exam.findOne({_id: id}, function(err, doc){
+        if(err){
+            return null;
+        }
         if(doc.postiLiberi < doc.postiTot){
             doc.postiLiberi++;
             doc.save();
         }
     });
-    if (exam.postiLiberi < exam.postiTot){
 
+    if (exam.postiLiberi < exam.postiTot){
+        return exam;
     }else{
-        return undefined;
+        return null;
     }
 };
 

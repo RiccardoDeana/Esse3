@@ -5,7 +5,7 @@
 
 <div class="btn-group btn-group-lg w-100 p-3">
     <a class="btn btn-primary active">Prenota Esame</a>
-    <a class="btn btn-primary" href="/registrations">Prenotazioni</a>
+    <a class="btn btn-primary" href="/registrations">Iscrizioni</a>
     <a class="btn btn-primary" href="/passed">Libretto</a>
 </div>
 <div class="container w-100">
@@ -17,6 +17,9 @@
 
     <h2>Prenota Esame</h2>
     <%- include('partials/error.ejs', {action: 'exams'})%>
+    <% if(locals.myExams.length == 0) {%>
+        <h2 class="text-center">Nessuna esame disponibile</h2>
+    <% } %>
     <% for(var i=0; i < locals.myExams.length; i++) {%>
     <div class="container border border-primary rounded" id=<%=locals.myExams[i]._id%> >
         <form method="post">

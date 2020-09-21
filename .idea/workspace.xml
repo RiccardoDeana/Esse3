@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="aaaaa">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="aaaaassssww">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/remStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/remStudentRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/middelware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/middleware" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,16 +58,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
-      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\middleware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views" />
-      <recent name="C:\Users\ricca\Desktop\Esse3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
+      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +86,7 @@
       <workItem from="1600323884330" duration="16586000" />
       <workItem from="1600460765761" duration="17279000" />
       <workItem from="1600479878133" duration="9000" />
-      <workItem from="1600511120282" duration="31004000" />
+      <workItem from="1600511120282" duration="32828000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -138,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600647471883</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="aaaaassssww">
+      <created>1600649055749</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600649055750</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,14 +170,15 @@
     <MESSAGE value="ci siamo quasi" />
     <MESSAGE value="ancora meglio" />
     <MESSAGE value="aaaaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aaaaa" />
+    <MESSAGE value="aaaaassssww" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaassssww" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600647474257">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600649057949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600647474257" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600649057949" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

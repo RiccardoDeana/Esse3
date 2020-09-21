@@ -12,7 +12,7 @@ const port = process.env.PORT;
 const indexController = require('./controllers/indexController');
 const examsController = require('./controllers/examsController');
 const addStudentController = require('./controllers/addStudentController');
-//const addExamController = require('./controllers/addExamController');
+const addExamController = require('./controllers/addExamController');
 const remStudentController = require('./controllers/remStudentController');
 //const passedController = require('./controllers/passedController');
 //const regGradeController = require('./controllers/regGradeController');
@@ -21,7 +21,7 @@ const registrationsController = require('./controllers/registrationsController')
 const indexRouter = require('./routers/indexRouter')(indexController);
 const examsRouter = require('./routers/examsRouter')(examsController);
 const addStudentRouter = require('./routers/addStudentRouter')(addStudentController);
-//const addExamRouter = require('./routers/addExamRouter')(addExamController);
+const addExamRouter = require('./routers/addExamRouter')(addExamController);
 const remStudentRouter = require('./routers/remStudentRouter')(remStudentController);
 //const passedRouter = require('./routers/passedRouter')(passedController);
 //const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
@@ -31,7 +31,7 @@ const registrationsRouter = require('./routers/registrationsRouter')(registratio
 app.use(indexRouter);
 app.use(examsRouter);
 app.use(addStudentRouter);
-//app.use(addExamRouter);
+app.use(addExamRouter);
 app.use(remStudentRouter);
 //app.use(passedRouter);
 //app.use(regGradeRouter);

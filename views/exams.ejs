@@ -28,7 +28,7 @@
             <input type="hidden" name="nomeEsame" value=<%= locals.myExams[i].nome%>>
             <input type="hidden" name="studente" value=<%= locals.matricola%>>
             <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
-            <button type="submit" class="btn btn-primary float-right">Iscricviti</button>
+            <button type="submit" class="btn btn-primary float-right">Iscriviti</button>
             <h4> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h4>
             <h4> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h4>
 

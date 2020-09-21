@@ -4,7 +4,7 @@ const configClearError = require('../middleware/configClearError');
 const configError = require('../middleware/configError');
 const isLoggedStudent = require('../middleware/isLoggedStudent');
 
-function examsRouter (controller) {
+function registrationsRouter (controller) {
 
     router.route('/registrations')
         .all(isLoggedStudent)
@@ -14,4 +14,4 @@ function examsRouter (controller) {
     return router;
 }
 
-module.exports = examsRouter;
+module.exports = registrationsRouter;

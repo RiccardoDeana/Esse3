@@ -20,7 +20,12 @@ const examSchema = mongoose.Schema({
         },
         postiLiberi: {
             type: Number,
-            required: true
+            required: true,
+            validate: {
+                validator: function(){
+                    return (this.postiLiberi <= this.postiTot);
+                }
+            }
         },
         data: {
             type: Date,

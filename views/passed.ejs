@@ -20,7 +20,11 @@
     <% for(var i=0; i < locals.myPassed.length; i++) {%>
     <div class="container border border-primary rounded" >
         <h2> <%= locals.myPassed[i].esame %> </h2>
-        <h4> Valutazione: <%= locals.myPassed[i].voto %> </h4>
+        <% if(locals.myPassed[i].lode === true) {%>
+            <h4> Valutazione: <%= locals.myPassed[i].voto %> e lode</h4>
+        <% }else{ %>
+            <h4> Valutazione: <%= locals.myPassed[i].voto %></h4>
+        <% } %>
     </div>
     <% } %>
 </div>

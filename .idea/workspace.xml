@@ -19,17 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="szfgdg">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Dovrebbe funzionare tutto a parte il &quot;Registra voto&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/passedRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/passedRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/regGradeRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/regGradeRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +86,8 @@
       <workItem from="1600323884330" duration="16586000" />
       <workItem from="1600460765761" duration="17279000" />
       <workItem from="1600479878133" duration="9000" />
-      <workItem from="1600511120282" duration="36641000" />
+      <workItem from="1600511120282" duration="37075000" />
+      <workItem from="1600705654271" duration="1755000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -164,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600652483766</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Dovrebbe funzionare tutto a parte il &quot;Registra voto&quot;">
+      <created>1600654892751</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600654892751</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,14 +195,15 @@
     <MESSAGE value="aaaaassssww" />
     <MESSAGE value="ergesvsv" />
     <MESSAGE value="szfgdg" />
-    <option name="LAST_COMMIT_MESSAGE" value="szfgdg" />
+    <MESSAGE value="Dovrebbe funzionare tutto a parte il &quot;Registra voto&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dovrebbe funzionare tutto a parte il &quot;Registra voto&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600652487021">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600654897103">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600652487021" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600654897103" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

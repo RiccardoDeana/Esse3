@@ -14,8 +14,8 @@ const examsController = require('./controllers/examsController');
 const addStudentController = require('./controllers/addStudentController');
 const addExamController = require('./controllers/addExamController');
 const remStudentController = require('./controllers/remStudentController');
-//const passedController = require('./controllers/passedController');
-//const regGradeController = require('./controllers/regGradeController');
+const passedController = require('./controllers/passedController');
+const regGradeController = require('./controllers/regGradeController');
 const registrationsController = require('./controllers/registrationsController');
 
 const indexRouter = require('./routers/indexRouter')(indexController);
@@ -23,8 +23,8 @@ const examsRouter = require('./routers/examsRouter')(examsController);
 const addStudentRouter = require('./routers/addStudentRouter')(addStudentController);
 const addExamRouter = require('./routers/addExamRouter')(addExamController);
 const remStudentRouter = require('./routers/remStudentRouter')(remStudentController);
-//const passedRouter = require('./routers/passedRouter')(passedController);
-//const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
+const passedRouter = require('./routers/passedRouter')(passedController);
+const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
 const registrationsRouter = require('./routers/registrationsRouter')(registrationsController);
 
 
@@ -33,8 +33,8 @@ app.use(examsRouter);
 app.use(addStudentRouter);
 app.use(addExamRouter);
 app.use(remStudentRouter);
-//app.use(passedRouter);
-//app.use(regGradeRouter);
+app.use(passedRouter);
+app.use(regGradeRouter);
 app.use(registrationsRouter);
 
 app.set('views', path.join(__dirname, 'views'));

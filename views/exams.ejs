@@ -17,7 +17,7 @@
 
     <h2>Prenota Esame</h2>
     <%- include('partials/error.ejs', {action: 'exams'})%>
-    <% if(locals.myExams.length == 0) {%>
+    <% if(locals.myExams.length === 0) {%>
         <h2 class="text-center">Nessuna esame disponibile</h2>
     <% } %>
     <% for(var i=0; i < locals.myExams.length; i++) {%>

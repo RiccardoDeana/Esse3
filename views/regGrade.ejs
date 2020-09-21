@@ -21,7 +21,7 @@
     <form method="post">
         <div class="form-group">
             <label for="studente">Matricola studente:</label>
-            <input type="number" class="form-control" id="studente" name="studente" required>
+            <input type="number" class="form-control" id="studente" name="studente" min="10000" max="9999999"required>
         </div>
         <div class="form-group">
             <label for="esame">Esame:</label>
@@ -31,7 +31,7 @@
             <div class="form-row">
                 <div class="col-11">
                     <label for="voto">Voto:</label>
-                    <input type="number" class="form-control" id="voto" name="voto" required>
+                    <input type="number" class="form-control" id="voto" name="voto" min="18" max="30" required>
                 </div>
                 <div class="col-1 text-center">
                     <label for="lode" >Lode:</label>

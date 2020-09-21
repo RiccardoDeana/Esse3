@@ -14,13 +14,13 @@
 
 <div class="container">
     <h2>Libretto</h2>
-    <% if(libretto.length == 0) {%>
-        <h2>Nessun voto registrato</h2>
+    <% if(locals.myPassed.length === 0) {%>
+        <h2 class="text-center">Nessun voto registrato</h2>
     <% } %>
-    <% for(var i=0; i < libretto.length; i++) {%>
-    <div class="container border border-primary rounded" id=<%=libretto[i]._id%> >
-        <h2> <%= libretto[i].esame %> </h2>
-        <h4> Valutazione: <%= libretto[i].voto %> </h4>
+    <% for(var i=0; i < locals.myPassed.length; i++) {%>
+    <div class="container border border-primary rounded" >
+        <h2> <%= locals.myPassed[i].esame %> </h2>
+        <h4> Valutazione: <%= locals.myPassed[i].voto %> </h4>
     </div>
     <% } %>
 </div>

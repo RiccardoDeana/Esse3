@@ -19,16 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="ergesvsv">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="szfgdg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/addExamRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addExamRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/addStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addStudentRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/registrationsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registrationsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/passedRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/passedRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/regGradeRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/regGradeRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <workItem from="1600323884330" duration="16586000" />
       <workItem from="1600460765761" duration="17279000" />
       <workItem from="1600479878133" duration="9000" />
-      <workItem from="1600511120282" duration="34379000" />
+      <workItem from="1600511120282" duration="36641000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -156,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600650972020</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="szfgdg">
+      <created>1600652483766</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600652483766</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,14 +192,15 @@
     <MESSAGE value="aaaaa" />
     <MESSAGE value="aaaaassssww" />
     <MESSAGE value="ergesvsv" />
-    <option name="LAST_COMMIT_MESSAGE" value="ergesvsv" />
+    <MESSAGE value="szfgdg" />
+    <option name="LAST_COMMIT_MESSAGE" value="szfgdg" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600650977614">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600652487021">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600650977614" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600652487021" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

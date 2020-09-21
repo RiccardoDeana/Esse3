@@ -33,12 +33,7 @@ const studentSchema = mongoose.Schema({
         tokens: [{
             token: {
                 type: String,
-                required: true,
-                expireAt: {
-                    type: Date,
-                    default: Date.now,
-                    index: { expires: '10m' },
-                }
+                required: true
             }
         }]
     },

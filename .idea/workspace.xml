@@ -19,17 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="ancora meglio">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="aaaaa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/passed.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/passed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/registrationsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registrationsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +87,7 @@
       <workItem from="1600323884330" duration="16586000" />
       <workItem from="1600460765761" duration="17279000" />
       <workItem from="1600479878133" duration="9000" />
-      <workItem from="1600511120282" duration="29432000" />
+      <workItem from="1600511120282" duration="31004000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -136,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600634571921</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aaaaa">
+      <created>1600647471883</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600647471883</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,14 +163,15 @@
     <MESSAGE value="qualcosa funziona" />
     <MESSAGE value="ci siamo quasi" />
     <MESSAGE value="ancora meglio" />
-    <option name="LAST_COMMIT_MESSAGE" value="ancora meglio" />
+    <MESSAGE value="aaaaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aaaaa" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600634573393">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600647474257">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600634573393" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600647474257" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

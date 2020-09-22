@@ -22,6 +22,7 @@ function examsGET (req, res, next) {
 }
 
 function examsPOST (req, res, next) {
+    console.log('ciao')
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const id = dati.idEsame;

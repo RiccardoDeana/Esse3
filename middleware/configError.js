@@ -1,6 +1,5 @@
 function configError (page, errorMessage) {
     return function errorMiddleware (error, req, res, next) {
-        console.log(error);
         const target = res.locals.error || {};
         Object.assign(target,
             {

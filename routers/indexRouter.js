@@ -12,6 +12,7 @@ function indexRouter (controller) {
     });
     router.get('/login', configClearError('login'), controller.loginPage);
     router.post('/login', controller.firstPage, configError('login'));
+    router.get('/logout', controller.logout);
 
     return router;
 }

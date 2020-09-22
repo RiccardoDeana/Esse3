@@ -28,8 +28,7 @@ const adminSchema = mongoose.Schema({
         },
         tokens: [{
             token: {
-                type: String,
-                required: true
+                type: String
             }
         }]
     },
@@ -50,20 +49,19 @@ adminSchema.methods.generateAuthToken = async function() {
     const token = jwt.sign({_id: admin._id}, process.env.JWT_KEY);
     admin.tokens = admin.tokens.concat({token});
     await admin.save();
+    setTimeout (function(admin, token){admin.logOut(token).catch((error)=>{})}, 30000, admin, token);
     return token;
 };
-/*
-adminSchema.statics.findByCredentials = async (matricola, password) => {
-    const admin = await Admin.findOne({matricola});
-    if (!admin) {
-        throw new Error({ error: 'Invalid login credentials' })
-    }
-    const isPasswordMatch = await bcrypt.compare(password, admin.password);
-    if (!isPasswordMatch) {
-        throw new Error({ error: 'Invalid login credentials' })
-    }
+
+adminSchema.methods.logOut = async function(token) {
+    const admin = this;
+    admin.tokens = admin.tokens.filter((tok) => {
+        return tok.token != token
+    });
+    await admin.save();
     return admin;
-};*/
+};
+
 
 adminSchema.statics.findByCredentials = async (matricola, password) => {
     const admin = await Admin.findOne({matricola});
@@ -74,21 +72,6 @@ adminSchema.statics.findByCredentials = async (matricola, password) => {
         }
     }
 };
-
-/*
-adminSchema.statics.findByCredentials = function (matricola, password) {
-    return Admin
-        .findOne({matricola})
-        .exec()
-        .then(administrator => {
-            if(administrator){
-                const hashMatch = bcrypt.compare(password, administrator.password);
-                if(hashMatch){
-                    return administrator;
-                }
-            }
-        });
-};*/
 
 const Admin = mongoose.model('Admin', adminSchema);
 

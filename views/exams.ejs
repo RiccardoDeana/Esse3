@@ -2,16 +2,13 @@
 <html lang="en">
 <%- include('partials/head.ejs', {title: 'Prenota esame'}); %>
 <body>
+<%- include('partials/user.ejs'); %>
 
 <div class="btn-group btn-group-lg w-100 p-3">
     <a class="btn btn-primary active">Prenota Esame</a>
     <a class="btn btn-primary" href="/registrations">Iscrizioni</a>
     <a class="btn btn-primary" href="/passed">Libretto</a>
 </div>
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
-</div>
-
 
 <div class="container">
 

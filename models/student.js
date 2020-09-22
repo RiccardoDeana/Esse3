@@ -32,8 +32,7 @@ const studentSchema = mongoose.Schema({
         },
         tokens: [{
             token: {
-                type: String,
-                required: true
+                type: String
             }
         }]
     },
@@ -41,14 +40,6 @@ const studentSchema = mongoose.Schema({
         collection: 'studenti'
     });
 
-/*
-studentSchema.pre('save', async function (next) {
-    const student = this;
-    if (student.isModified('password')) {
-        student.password = await bcrypt.hash(student.password, 8)
-    }
-    next()
-});*/
 
 studentSchema.pre('save', async function (next) {
     const student = this;
@@ -63,12 +54,12 @@ studentSchema.methods.generateAuthToken = async function() {
     const token = jwt.sign({_id: student._id}, process.env.JWT_KEY);
     student.tokens = student.tokens.concat({token});
     await student.save();
+    setTimeout (function(student, token){student.logOut(token).catch((error)=>{})}, 30000, student, token);
     return token;
 };
 
 studentSchema.statics.findByCredentials = async (matricola, password) => {
     const student = await Student.findOne({matricola});
-
     if (student) {
         const isPasswordMatch = await bcrypt.compare(password, student.password);
         if (isPasswordMatch) {
@@ -76,33 +67,16 @@ studentSchema.statics.findByCredentials = async (matricola, password) => {
         }
     }
 };
-/*
-studentSchema.statics.findByMatricola = async (matricola) => {
-    const student = await Student.findOne({matricola});
-    if (student) {
-        return student;
-    }
-};*/
-/*
-studentSchema.statics.findByCredentials = async (matricola, password) => {
-    const student = await Student.findOne({matricola});
-    if (!student) {
-        throw new Error({ error: 'Invalid login credentials' })
-    }
-    const isPasswordMatch = await bcrypt.compare(password, student.password);
-    if (!isPasswordMatch) {
-        throw new Error({ error: 'Invalid login credentials' })
-    }
+
+studentSchema.methods.logOut = async function(token) {
+
+    const student = this;
+    student.tokens = student.tokens.filter((tok) => {
+        return tok.token != token
+    });
+    await student.save();
     return student;
 };
-
-studentSchema.statics.findByMatricola = async (matricola) => {
-    const student = await Student.findOne({matricola});
-    if (!student) {
-        throw new Error({ error: 'Invalid login credentials' })
-    }
-    return student;
-};*/
 
 const Student = mongoose.model('Student', studentSchema);
 

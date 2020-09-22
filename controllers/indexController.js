@@ -45,7 +45,42 @@ function loginPage (req, res, next) {
     res.render('login');
 }
 
+async function logout (req, res, next) {
+    matricola = req.app.locals.matricola;
+    token = req.app.locals.token;
+    const student = await Student.findOne({ matricola: matricola, 'tokens.token': token });
+    if(student){
+        student.logOut(token)
+            .then(() => {
+                req.app.locals.matricola = undefined;
+                req.app.locals.nome = undefined;
+                req.app.locals.cognome = undefined;
+                req.app.locals.token = undefined;
+                res.redirect('/login');
+            })
+            .catch(error => {
+                return next(error);
+            })
+    }
+
+    const admin = await Admin.findOne({ matricola: matricola, 'tokens.token': token });
+    if(admin){
+        admin.logOut(token)
+            .then(() => {
+                req.app.locals.matricola = undefined;
+                req.app.locals.nome = undefined;
+                req.app.locals.cognome = undefined;
+                req.app.locals.token = undefined;
+                res.redirect('/login');
+            })
+            .catch(error => {
+                return next(error);
+            })
+    }
+}
+
 module.exports = {
     loginPage,
-    firstPage
+    firstPage,
+    logout
 };

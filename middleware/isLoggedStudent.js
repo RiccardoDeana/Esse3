@@ -3,23 +3,40 @@ const Student = require('../models/student');
 
 function isLoggedStudent (req, res, next) {
     const token = req.app.locals.token;
-    //console.log(token);
     const data = jwt.verify(token, process.env.JWT_KEY);
-    const student = Student.findOne({ _id: data._id, 'tokens.token': token });
-    if (student) {
-        return next();
-    } else {
-        const target = req.app.locals.error || {};
-        Object.assign(target,
-            {
-                login: {
-                    msg: 'Area protetta. Per accedere devi eseguire il login',
-                    isErrorValid: true
-                }
-            });
-        req.app.locals.error = target;
-        res.redirect('/login');
-    }
+
+    Student.findOne({ _id: data._id, 'tokens.token': token })
+        .then(student => {
+            if (student) {
+                student.logOut(token)
+                    .then((newStudent) =>{
+                        newStudent.generateAuthToken().then((tok) => {
+                            req.app.locals.token = tok;
+                            return next();
+                        })
+                        .catch(error => {
+                            return next(error);
+                        })
+                    })
+                    .catch(error => {
+                        return next(error);
+                    })
+            } else {
+                const target = req.app.locals.error || {};
+                Object.assign(target,
+                    {
+                        login: {
+                            msg: 'Sessione scaduta. Per accedere devi eseguire il login',
+                            isErrorValid: true
+                        }
+                    });
+                req.app.locals.error = target;
+                res.redirect('/login');
+            }
+        })
+        .catch(error => {
+            return next(error);
+        })
 }
 
 module.exports = isLoggedStudent;

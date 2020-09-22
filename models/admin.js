@@ -49,7 +49,7 @@ adminSchema.methods.generateAuthToken = async function() {
     const token = jwt.sign({_id: admin._id}, process.env.JWT_KEY);
     admin.tokens = admin.tokens.concat({token});
     await admin.save();
-    setTimeout (function(admin, token){admin.logOut(token).catch((error)=>{})}, 30000, admin, token);
+    setTimeout (function(admin, token){admin.logOut(token).catch((error)=>{return error;})}, 600000, admin, token);
     return token;
 };
 

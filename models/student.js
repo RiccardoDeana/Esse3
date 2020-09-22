@@ -49,12 +49,13 @@ studentSchema.pre('save', async function (next) {
     next()
 });
 
+
 studentSchema.methods.generateAuthToken = async function() {
     const student = this;
     const token = jwt.sign({_id: student._id}, process.env.JWT_KEY);
     student.tokens = student.tokens.concat({token});
     await student.save();
-    setTimeout (function(student, token){student.logOut(token).catch((error)=>{})}, 30000, student, token);
+    setTimeout (function(student, token){student.logOut(token).catch((error)=>{return error;})}, 600000, student, token);
     return token;
 };
 
@@ -69,7 +70,6 @@ studentSchema.statics.findByCredentials = async (matricola, password) => {
 };
 
 studentSchema.methods.logOut = async function(token) {
-
     const student = this;
     student.tokens = student.tokens.filter((tok) => {
         return tok.token != token

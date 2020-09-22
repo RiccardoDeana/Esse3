@@ -20,17 +20,13 @@ function registrationsPOST (req, res, next) {
     Registration.findOne({_id:id})
         .then((registration) => {
             if(registration){
-                Registration.deleteOne({_id:id})
+                Registration.deleteRegistration(id)
                     .then(() => {
-                        Exam.increaseFree(registration.idEsame)
-                            .then(() => {
-                                res.redirect('/registrations');
-                            })
-                            .catch(error => {
-                                return next(error)});
+                        res.redirect('/registrations');
                     })
                     .catch(error => {
-                        return next(error)});
+                            return next(error)
+                    });
             }else{
                 const error = new Error('La prenotazione non esiste');
                 error.status = 401;

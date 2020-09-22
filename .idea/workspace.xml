@@ -19,24 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Sembra che funzioni tutto.&#10;Manca il logout e la scadenza del token">
-      <change afterPath="$PROJECT_DIR$/views/partials/user.ejs" afterDir="false" />
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Funziona tutto(spero)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/configClearError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configClearError.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +92,8 @@
       <workItem from="1600479878133" duration="9000" />
       <workItem from="1600511120282" duration="37075000" />
       <workItem from="1600705654271" duration="1914000" />
-      <workItem from="1600720619608" duration="15457000" />
+      <workItem from="1600720619608" duration="15693000" />
+      <workItem from="1600773107929" duration="4594000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -187,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600707545004</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Funziona tutto(spero)">
+      <created>1600736257999</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600736257999</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,14 +217,15 @@
     <MESSAGE value="szfgdg" />
     <MESSAGE value="Dovrebbe funzionare tutto a parte il &quot;Registra voto&quot;" />
     <MESSAGE value="Sembra che funzioni tutto.&#10;Manca il logout e la scadenza del token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sembra che funzioni tutto.&#10;Manca il logout e la scadenza del token" />
+    <MESSAGE value="Funziona tutto(spero)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funziona tutto(spero)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600707547898">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600736263168">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600707547898" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600736263168" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

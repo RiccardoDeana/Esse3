@@ -9,7 +9,7 @@ function remStudentPOST (req, res, next) {
     Student.findOne({matricola:req.body.matricola})
         .then(student => {
             if(student){
-                Student.deleteOne({matricola:req.body.matricola})
+                Student.deleteStudent(req.body.matricola)
                     .then(() =>{
                         res.redirect('/remStudent');
                     })

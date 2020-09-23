@@ -24,7 +24,10 @@
         <form method="post">
             <h2> <%= locals.myRegistrations[i].nomeEsame %> </h2>
             <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
-            <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
+            <% const date = new Date();%>
+            <% if(locals.myRegistrations[i].data.getTime() > date.getTime()){ %>
+                <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
+            <% } %>
             <h4> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h4>
         </form>
     </div>

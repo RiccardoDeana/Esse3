@@ -26,15 +26,34 @@ const adminSchema = mongoose.Schema({
             required: true,
             minLength: 7
         },
-        tokens: [{
-            token: {
-                type: String
-            }
-        }]
     },
     {
         collection: 'amministratori'
     });
+
+const adminTokenSchema = mongoose.Schema({
+        idAdmin: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        token: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        dataCreazione: {
+            type: Date,
+            default: Date.now,
+            expires: 600
+        }
+    },
+    {
+        collection: 'token amministratori'
+    });
+
+adminTokenSchema.index({idAdmin: 1, token: 1}, {unique: true});
+const AdminToken = mongoose.model('AdminToken', adminTokenSchema);
 
 adminSchema.pre('save', async function (next) {
     const admin = this;
@@ -47,19 +66,19 @@ adminSchema.pre('save', async function (next) {
 adminSchema.methods.generateAuthToken = async function() {
     const admin = this;
     const token = jwt.sign({_id: admin._id}, process.env.JWT_KEY);
-    admin.tokens = admin.tokens.concat({token});
-    await admin.save();
-    setTimeout (function(admin, token){admin.logOut(token).catch((error)=>{return error;})}, 600000, admin, token);
+    const adminToken = new AdminToken({idAdmin:admin._id, token:token});
+    await adminToken.save();
     return token;
 };
 
 adminSchema.methods.logOut = async function(token) {
     const admin = this;
-    admin.tokens = admin.tokens.filter((tok) => {
-        return tok.token != token
-    });
-    await admin.save();
-    return admin;
+    const result = await AdminToken.deleteOne({idAdmin:admin._id, token:token});
+    if(result.deletedCount != 0){
+        return true;
+    }else{
+        return false;
+    }
 };
 
 

@@ -29,16 +29,35 @@ const studentSchema = mongoose.Schema({
         facolta: {
             type: String,
             required: true,
-        },
-        tokens: [{
-            token: {
-                type: String
-            }
-        }]
+        }
     },
     {
         collection: 'studenti'
     });
+
+const studentTokenSchema = mongoose.Schema({
+        idStudente: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        token: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        dataCreazione: {
+            type: Date,
+            default: Date.now,
+            expires: 600
+        }
+    },
+    {
+        collection: 'token studenti'
+    });
+
+studentTokenSchema.index({idStudente: 1, token: 1}, {unique: true});
+const StudentToken = mongoose.model('StudentToken', studentTokenSchema);
 
 
 studentSchema.pre('save', async function (next) {
@@ -53,9 +72,8 @@ studentSchema.pre('save', async function (next) {
 studentSchema.methods.generateAuthToken = async function() {
     const student = this;
     const token = jwt.sign({_id: student._id}, process.env.JWT_KEY);
-    student.tokens = student.tokens.concat({token});
-    await student.save();
-    setTimeout (function(student, token){student.logOut(token).catch((error)=>{return error;})}, 600000, student, token);
+    const studentToken = new StudentToken({idStudente:student._id, token:token});
+    await studentToken.save();
     return token;
 };
 
@@ -83,11 +101,12 @@ studentSchema.statics.deleteStudent = async (matricola) => {
 
 studentSchema.methods.logOut = async function(token) {
     const student = this;
-    student.tokens = student.tokens.filter((tok) => {
-        return tok.token != token
-    });
-    await student.save();
-    return student;
+    const result = await StudentToken.deleteOne({idStudente:student._id, token:token});
+    if(result.deletedCount != 0){
+        return true;
+    }else{
+        return false;
+    }
 };
 
 const Student = mongoose.model('Student', studentSchema);

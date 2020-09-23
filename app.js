@@ -27,7 +27,6 @@ const passedRouter = require('./routers/passedRouter')(passedController);
 const regGradeRouter = require('./routers/regGradeRouter')(regGradeController);
 const registrationsRouter = require('./routers/registrationsRouter')(registrationsController);
 
-
 app.use(indexRouter);
 app.use(examsRouter);
 app.use(addStudentRouter);
@@ -37,7 +36,7 @@ app.use(passedRouter);
 app.use(regGradeRouter);
 app.use(registrationsRouter);
 
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 app.use(function (req, res, next) {

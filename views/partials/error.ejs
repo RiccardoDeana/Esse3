@@ -1,9 +1,5 @@
 <% if (locals.error && locals.error[action]) { %>
-    <div class="form-group">
-        <div class="alert alert-danger" role="alert">
-            <p>
-                <%= locals.error[action].msg %>
-            </p>
-        </div>
+    <div class="alert alert-danger text-center" role="alert">
+        <%= locals.error[action].msg %>
     </div>
 <% } %>

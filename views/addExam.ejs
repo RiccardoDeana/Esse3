@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Aggiungi esame'}); %>
+<head>
+    <%- include('partials/head.ejs', {title: 'Aggiungi Esame'}); %>
+    <link href="css/administrator.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
+<div class="fixed-top">
 <%- include('partials/user.ejs'); %>
 
-<div class="btn-group btn-group-lg w-100 p-3">
-    <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
-    <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
-    <a class="btn btn-primary active">Aggiungi Esame</a>
-    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+    <div class="container">
+    <div class="btn-group btn-group-lg w-100">
+        <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
+        <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
+        <a class="btn btn-primary active">Aggiungi Esame</a>
+        <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+    </div>
+    </div>
 </div>
-
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
-</div>
-
-
 
 <div class="container">
-    <h2>Aggiungi esame</h2>
-    <form method="post">
+    <form class="form-admin" method="post">
+        <h2 class="text-center">Aggiungi Esame</h2>
         <div class="form-group">
             <label for="nome">Esame:</label>
-            <input type="text" class="form-control" id="nome" name="nome" required>
+            <input type="text" class="form-control" id="nome" name="nome" required autofocus>
         </div>
         <div class="form-group">
             <label for="facolta">Facoltà:</label>
@@ -41,12 +43,11 @@
             <label for="posti">Numero posti:</label>
             <input type="number" class="form-control" id="posti" name="posti" min="1" required>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Aggiungi</button>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-lg btn-primary">Aggiungi</button>
         </div>
-        <%- include('partials/error.ejs', {action: 'addExam'})%>
     </form>
+    <%- include('partials/error.ejs', {action: 'addExam'})%>
 </div>
-
 </body>
 </html>

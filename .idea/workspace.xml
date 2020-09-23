@@ -20,10 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Migliorata la cancellazione delle iscrizioni">
+      <change afterPath="$PROJECT_DIR$/views/css/administrator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/css/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/css/student.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Esse3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Esse3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/error.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/user.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +56,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/partials" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,15 +68,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
-      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pigi\Desktop\Progetti AppWeb\Esse3\views\css" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\partials" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middleware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
   </component>
@@ -90,6 +100,8 @@
       <workItem from="1600705654271" duration="1914000" />
       <workItem from="1600720619608" duration="15693000" />
       <workItem from="1600773107929" duration="6052000" />
+      <workItem from="1600842835349" duration="52000" />
+      <workItem from="1600842913365" duration="16316000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -238,9 +250,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600733257903" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600614722565">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="486" y="-1010" width="945" height="969" key="search.everywhere.popup" timestamp="1600848856971">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600614722565" />
+    <state x="486" y="-1010" width="945" height="969" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600848856971" />
   </component>
 </project>

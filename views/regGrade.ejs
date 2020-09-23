@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Registra voto'}); %>
+<head>
+    <%- include('partials/head.ejs', {title: 'Registra Voto'}); %>
+    <link href="css/administrator.css" rel="stylesheet" type="text/css">
+</head>
 <body>
+<div class="fixed-top">
 <%- include('partials/user.ejs'); %>
 
-<div class="btn-group btn-group-lg w-100 p-3">
-    <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
-    <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
-    <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
-    <a class="btn btn-primary active">Registra Voto</a>
+    <div class="container">
+    <div class="btn-group btn-group-lg w-100">
+        <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
+        <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
+        <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
+        <a class="btn btn-primary active">Registra Voto</a>
+    </div>
+    </div>
 </div>
-
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
-</div>
-
-
 
 <div class="container">
-    <h2>Registra voto</h2>
-    <form method="post">
+    <form class="form-admin" method="post">
+        <h2 class="text-center">Registra Voto</h2>
         <div class="form-group">
             <label for="studente">Matricola studente:</label>
-            <input type="number" class="form-control" id="studente" name="studente" min="10000" max="9999999"required>
+            <input type="number" class="form-control" id="studente" name="studente" min="10000" max="9999999"required autofocus>
         </div>
         <div class="form-group">
             <label for="esame">Esame:</label>
@@ -40,12 +41,11 @@
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Registra</button>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-lg btn-primary">Registra</button>
         </div>
-        <%- include('partials/error.ejs', {action: 'regGrade'})%>
     </form>
+    <%- include('partials/error.ejs', {action: 'regGrade'})%>
 </div>
-
 </body>
 </html>

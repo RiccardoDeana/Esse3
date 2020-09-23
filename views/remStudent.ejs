@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Rimuovi studente'}); %>
+<head>
+    <%- include('partials/head.ejs', {title: 'Rimuovi Studente'}); %>
+    <link href="css/administrator.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
+<div class="fixed-top">
 <%- include('partials/user.ejs'); %>
 
-<div class="btn-group btn-group-lg w-100 p-3">
-    <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
-    <a class="btn btn-primary active">Rimuovi Studente</a>
-    <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
-    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+    <div class="container">
+    <div class="btn-group btn-group-lg w-100">
+        <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
+        <a class="btn btn-primary active">Rimuovi Studente</a>
+        <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
+        <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+    </div>
+    </div>
 </div>
-
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
-</div>
-
-
 
 <div class="container">
-    <h2>Rimuovi studente</h2>
-    <form method="post">
+    <form class="form-admin" method="post">
+        <h2 class="text-center">Rimuovi Studente</h2>
         <div class="form-group">
             <label for="matricola">Matricola:</label>
-            <input type="number" class="form-control" id="matricola" name="matricola" required>
+            <input type="number" class="form-control" id="matricola" name="matricola" required autofocus>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Rimuovi</button>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-lg btn-primary">Rimuovi</button>
         </div>
-        <%- include('partials/error.ejs', {action: 'remStudent'})%>
     </form>
+    <%- include('partials/error.ejs', {action: 'remStudent'})%>
 </div>
 
 </body>

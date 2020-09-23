@@ -1,25 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Esse3'}); %>
-<body>
-<div class="container">
-    <h2>Esse3</h2>
-    <form method="post" action="/login">
-        <div class="form-group">
-            <label for="matricola">Matricola:</label>
-            <input type="number" class="form-control" id= "matricola" name="matricola" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-                <input type="password" class="form-control"  id="password" name="password" required>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Log in</button>
-        </div>
-        <%- include('partials/error.ejs', {action: 'login'})%>
-    </form>
-</div>
+  <head>
+    <%- include('partials/head.ejs', {title: 'Esse3'}); %>
+    <link href="css/signin.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
 
+  <body class="text-center">
+    <form class="form-signin" method="post">
+      <i class="material-icons">school</i>
+      <h1 class="h3 mb-3 font-weight-normal">Esse3</h1>
+      <label for="matricola" class="sr-only">Matricola</label>
+      <input type="number" id="matricola" name="matricola" class="form-control" placeholder="Matricola" required autofocus>
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+      <%- include('partials/error.ejs', {action: 'login'})%>
+    </form>
 
 </body>
 </html>

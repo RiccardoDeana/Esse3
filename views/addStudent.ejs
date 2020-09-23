@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Aggiungi studente'}); %>
+<head>
+    <%- include('partials/head.ejs', {title: 'Aggiungi Studente'}); %>
+    <link href="css/administrator.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
+<div class="fixed-top">
 <%- include('partials/user.ejs'); %>
 
-<div class="btn-group btn-group-lg w-100 p-3">
-    <a class="btn btn-primary active">Aggiungi Studente</a>
-    <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
-    <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
-    <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+<div class="container">
+    <div class="btn-group btn-group-lg w-100">
+        <a class="btn btn-primary active">Aggiungi Studente</a>
+        <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
+        <a class="btn btn-primary" href="/addExam">Aggiungi Esame</a>
+        <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
+    </div>
 </div>
-
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
 </div>
-
-
 
 <div class="container">
-    <h2>Aggiungi studente</h2>
-
-    <form method="post">
-        <div class="form-row">
+    <form class="form-admin" method="post">
+        <h2 class="text-center">Aggiungi Studente</h2>
+        <div class="form-row form-group">
             <div class="col">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <input type="text" class="form-control" id="nome" name="nome" required autofocus>
             </div>
             <div class="col">
                 <label for="cognome">Cognome:</label>
                 <input type="text" class="form-control" id="cognome" name="cognome" required>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="matricola">Matricola:</label>
-            <input type="number" class="form-control" id="matricola" name="matricola" min="10000" max="9999999" required>
         </div>
         <div class="form-group">
             <label for="facolta">Facoltà:</label>
@@ -45,15 +42,19 @@
             </select>
         </div>
         <div class="form-group">
+            <label for="matricola">Matricola:</label>
+            <input type="number" class="form-control" id="matricola" name="matricola" min="10000" max="9999999" required>
+        </div>
+        <div class="form-group">
             <label for="password">Password:</label>
             <input type="text" class="form-control"  id="password" name="password"  minlength="7" required>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Aggiungi</button>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-lg btn-primary">Aggiungi</button>
         </div>
-        <%- include('partials/error.ejs', {action: 'addStudent'})%>
-    </form>
-</div>
 
+    </form>
+    <%- include('partials/error.ejs', {action: 'addStudent'})%>
+</div>
 </body>
 </html>

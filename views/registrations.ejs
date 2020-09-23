@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Iscrizioni'}); %>
+<head>
+    <%- include('partials/head.ejs', {title: 'Iscrizioni'}); %>
+    <link href="css/student.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
+<div class="fixed-top">
 <%- include('partials/user.ejs'); %>
-
-<div class="btn-group btn-group-lg w-100 p-3">
-    <a class="btn btn-primary" href="/exams">Prenota Esame</a>
-    <a class="btn btn-primary active">Iscrizioni</a>
-    <a class="btn btn-primary" href="/passed">Libretto</a>
+    <div class="container">
+    <div class="btn-group btn-group-lg w-100">
+        <a class="btn btn-primary" href="/exams">Prenota Esame</a>
+        <a class="btn btn-primary active">Iscrizioni</a>
+        <a class="btn btn-primary" href="/passed">Libretto</a>
+    </div>
+    </div>
 </div>
-<div class="container w-100">
-    <h2 class="float-right"><%= locals.nome %> <%= locals.cognome %></h2>
-</div>
 
-<div class="container">
-    <h2>Iscrizioni</h2>
+<div class="container student">
+    <h2 class="text-center">Iscrizioni</h2>
     <%- include('partials/error.ejs', {action: 'registrations'})%>
     <% if(locals.myRegistrations.length === 0) {%>
-        <h2 class="text-center">Nessuna iscrizione effettuata</h2>
+        <h3 class="text-center">Nessuna iscrizione effettuata</h3>
     <% } %>
     <% const date = new Date();%>
     <% for(var i=0; i < locals.myRegistrations.length; i++) {%>
-    <div class="container border border-primary rounded" id=<%=locals.myRegistrations[i]._id%> >
+    <div class="container border border-primary rounded regExam" id=<%=locals.myRegistrations[i]._id%> >
         <form method="post">
-            <h2> <%= locals.myRegistrations[i].nomeEsame %> </h2>
-            <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
-            <% if(locals.myRegistrations[i].data.getTime() > date.getTime()){ %>
-                <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
-            <% } %>
-            <h4> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h4>
+            <div class="row">
+                <div class="col-7">
+                    <h3> <%= locals.myRegistrations[i].nomeEsame %> </h3>
+                    <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
+                    <h5> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h5>
+                </div>
+                <div class="col">
+                    <% if(locals.myRegistrations[i].data.getTime() > date.getTime()){ %>
+                        <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
+                        <% } %>
+                </div>
+            </div>
         </form>
     </div>
     <% } %>
 </div>
-
 </body>
 </html>

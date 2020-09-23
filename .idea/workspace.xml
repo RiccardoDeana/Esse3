@@ -19,13 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Iscrizioni scadute">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Rimuovi studente cancella anche i voti  e le iscrizioni">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/signin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/student.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/partials" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,15 +60,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
+      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\models" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\partials" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middleware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
   </component>
@@ -94,8 +94,6 @@
       <workItem from="1600773107929" duration="6155000" />
       <workItem from="1600844473041" duration="3597000" />
       <workItem from="1600860160731" duration="183000" />
-      <workItem from="1600865711646" duration="2716000" />
-      <workItem from="1600868538689" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -209,14 +207,7 @@
       <option name="project" value="LOCAL" />
       <updated>1600854456995</updated>
     </task>
-    <task id="LOCAL-00017" summary="Iscrizioni scadute">
-      <created>1600860127903</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1600860127903</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,19 +242,23 @@
     <MESSAGE value="Migliorata la cancellazione delle iscrizioni" />
     <MESSAGE value="Sostituito il bottone di logout con metodo post, che è meglio" />
     <MESSAGE value="Rimuovi studente cancella anche i voti  e le iscrizioni" />
-    <MESSAGE value="Iscrizioni scadute" />
-    <option name="LAST_COMMIT_MESSAGE" value="Iscrizioni scadute" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rimuovi studente cancella anche i voti  e le iscrizioni" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600860143883">
+    <state x="184" y="86" key="MergeDialog" timestamp="1600872888994">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600872888994" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600854460399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600860143883" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600860380287">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600872874387">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600860380287" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600872874387" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -21,43 +21,25 @@
     <h2 class="text-center">Prenota Esame</h2>
     <%- include('partials/error.ejs', {action: 'exams'})%>
     <% if(locals.myExams.length === 0) {%>
-        <h2 class="text-center">Nessuna esame disponibile</h2>
+        <h3 class="text-center">Nessun esame disponibile</h3>
     <% } %>
     <% for(var i=0; i < locals.myExams.length; i++) {%>
     <div class="container border border-primary rounded exam" id=<%=locals.myExams[i]._id%> >
         <form method="post">
-
-            <div class="form-row w-100">
-                <h3> <%= locals.myExams[i].nome %> </h3>
-                <input type="hidden" name="idEsame" value=<%= locals.myExams[i]._id%>>
-                <input type="hidden" name="nomeEsame" value=<%= locals.myExams[i].nome%>>
-                <input type="hidden" name="studente" value=<%= locals.matricola%>>
-                <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
-            </div>
-
-            <div class="form-row w-100">
-                <div class="col-10">
-                    <h5 class> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h5
+            <div class="row">
+                <div class="col-8">
+                    <h3> <%= locals.myExams[i].nome %> </h3>
+                    <input type="hidden" name="idEsame" value=<%= locals.myExams[i]._id%>>
+                    <input type="hidden" name="nomeEsame" value=<%= locals.myExams[i].nome%>>
+                    <input type="hidden" name="studente" value=<%= locals.matricola%>>
+                    <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
+                    <h5 class> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h5>
+                    <h5 class> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h5>
                 </div>
                 <div class="col">
                     <button type="submit" class="btn btn-lg btn-primary float-right">Iscriviti</button>
                 </div>
             </div>
-
-            <div class="form-row w-100">
-                <h5 class> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h5>
-            </div>
-
-            <!--
-                <h3> <%= locals.myExams[i].nome %> </h3>
-                <input type="hidden" name="idEsame" value=<%= locals.myExams[i]._id%>>
-                <input type="hidden" name="nomeEsame" value=<%= locals.myExams[i].nome%>>
-                <input type="hidden" name="studente" value=<%= locals.matricola%>>
-                <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
-                <button type="submit" class="btn btn-lg btn-primary float-right">Iscriviti</button>
-                <h5 class> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h5>
-                <h5 class> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h5>
-                -->
 
         </form>
     </div>

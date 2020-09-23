@@ -28,25 +28,32 @@ function examsPOST (req, res, next) {
     const id = dati.idEsame;
     Exam.decreaseFree(id)
         .then(exam => {
+            const date = new Date();
             if(exam){
-                const registration = new Registration(dati);
-                registration.save(function(err){
-                    if(err){
-                        Exam.increaseFree(id)
-                            .then(() =>{
-                                const error = new Error('prenotazione già effettuata');
-                                error.status = 401;
-                                return next(error);
-                            }).catch(error => {
+                if(exam.data.getTime() > date.getTime()){
+                    const registration = new Registration(dati);
+                    registration.save(function(err){
+                        if(err){
+                            Exam.increaseFree(id)
+                                .then(() =>{
+                                    const error = new Error('Prenotazione già effettuata');
+                                    error.status = 401;
+                                    return next(error);
+                                }).catch(error => {
                                 return next(error);
                             });
-                    }else{
-                        res.redirect('/exams');
-                    }
-                });
+                        }else{
+                            res.redirect('/exams');
+                        }
+                    });
+                }else{
+                    const error = new Error('Esame scaduto');
+                    error.status = 401;
+                    return next(error);
+                }
 
             }else{
-                const error = new Error('posti esauriti');
+                const error = new Error('Posti esauriti');
                 error.status = 401;
                 return next(error);
             }

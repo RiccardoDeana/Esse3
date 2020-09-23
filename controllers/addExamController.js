@@ -16,7 +16,6 @@ function addExamPOST (req, res, next) {
     const exam = new Exam(dati);
     exam.save(function(err){
         if(err){
-            console.log(err)
             const error = new Error('Esame già aggiunto');
             error.status = 401;
             return next(error);

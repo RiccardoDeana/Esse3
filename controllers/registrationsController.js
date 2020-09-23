@@ -19,14 +19,21 @@ function registrationsPOST (req, res, next) {
     const id = dati.id;
     Registration.findOne({_id:id})
         .then((registration) => {
+            const date = new Date();
             if(registration){
-                Registration.deleteRegistration(id)
-                    .then(() => {
-                        res.redirect('/registrations');
-                    })
-                    .catch(error => {
+                if(registration.data.getTime() > date.getTime()) {
+                    Registration.deleteRegistration(id)
+                        .then(() => {
+                            res.redirect('/registrations');
+                        })
+                        .catch(error => {
                             return next(error)
-                    });
+                        });
+                }else{
+                    const error = new Error('Non è possibile annullare iscrizioni passate');
+                    error.status = 401;
+                    return next(error);
+                }
             }else{
                 const error = new Error('La prenotazione non esiste');
                 error.status = 401;

@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Esami scaduti">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
-    </list>
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Iscrizioni scadute" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1600705654271" duration="1914000" />
       <workItem from="1600720619608" duration="15693000" />
       <workItem from="1600773107929" duration="6155000" />
-      <workItem from="1600844473041" duration="4351000" />
+      <workItem from="1600844473041" duration="4502000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -209,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600855856015</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Iscrizioni scadute">
+      <created>1600859675431</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1600859675431</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,18 +249,19 @@
     <MESSAGE value="Sostituito il bottone di logout con metodo post, che è meglio" />
     <MESSAGE value="Rimuovi studente cancella anche i voti  e le iscrizioni" />
     <MESSAGE value="Esami scaduti" />
-    <option name="LAST_COMMIT_MESSAGE" value="Esami scaduti" />
+    <MESSAGE value="Iscrizioni scadute" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iscrizioni scadute" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600855858998">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600859683756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600855858998" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600859683756" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600859730430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600859730430" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

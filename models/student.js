@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const StudentToken = require('./studentToken');
 
 const studentSchema = mongoose.Schema({
         nome: {
@@ -34,31 +35,6 @@ const studentSchema = mongoose.Schema({
     {
         collection: 'studenti'
     });
-
-const studentTokenSchema = mongoose.Schema({
-        idStudente: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        token: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        dataCreazione: {
-            type: Date,
-            default: Date.now,
-            expires: 600
-        }
-    },
-    {
-        collection: 'token studenti'
-    });
-
-studentTokenSchema.index({idStudente: 1, token: 1}, {unique: true});
-const StudentToken = mongoose.model('StudentToken', studentTokenSchema);
-
 
 studentSchema.pre('save', async function (next) {
     const student = this;

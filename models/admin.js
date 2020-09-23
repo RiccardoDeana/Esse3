@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const AdminToken = require('./adminToken');
 
 const adminSchema = mongoose.Schema({
         nome: {
@@ -31,29 +32,6 @@ const adminSchema = mongoose.Schema({
         collection: 'amministratori'
     });
 
-const adminTokenSchema = mongoose.Schema({
-        idAdmin: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        token: {
-            type: String,
-            required: true,
-            trim: true
-        },
-        dataCreazione: {
-            type: Date,
-            default: Date.now,
-            expires: 600
-        }
-    },
-    {
-        collection: 'token amministratori'
-    });
-
-adminTokenSchema.index({idAdmin: 1, token: 1}, {unique: true});
-const AdminToken = mongoose.model('AdminToken', adminTokenSchema);
 
 adminSchema.pre('save', async function (next) {
     const admin = this;

@@ -32,7 +32,7 @@ const passedSchema = mongoose.Schema({
         collection: 'superati'
     });
 
-passedSchema.index({nome: 1, studente: 1}, {unique: true});
+passedSchema.index({esame: 1, studente: 1}, {unique: true});
 
 const Passed = mongoose.model('Passed', passedSchema);
 

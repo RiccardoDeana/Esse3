@@ -10,12 +10,30 @@
 <%- include('partials/user.ejs'); %>
 
     <div class="container">
-    <div class="btn-group btn-group-lg w-100">
-        <a class="btn btn-primary" href="/addStudent">Aggiungi Studente</a>
-        <a class="btn btn-primary" href="/remStudent">Rimuovi Studente</a>
-        <a class="btn btn-primary active">Aggiungi Esame</a>
-        <a class="btn btn-primary" href="/regGrade">Registra Voto</a>
-    </div>
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark rounded w-100">
+            <a class="navbar-brand"><i class="material-icons">school</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addStudent">Aggiungi Studente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/remStudent">Rimuovi Studente</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/addExam">Aggiungi Esame</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/regGrade">Registra Voto</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
     </div>
 </div>
 

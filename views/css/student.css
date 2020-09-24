@@ -4,36 +4,47 @@ body{
 }
 
 .user{
-  padding-top: 5px;
-  padding-bottom: 42px;
+  padding-top: 0.3em;
+  padding-bottom: 2.6em;
   background-color: #f5f5f5;
 }
 
 .user h4{
-  padding-top: 3px;
+  padding-top: 0.3em;
   padding-right: 1%;
 }
 
 .student{
-  padding-top: 125px;
+  padding-top: 8em;
 }
 
 .student h2{
-  padding-bottom: 10px;
+  padding-bottom: 0.6em;
 }
 
 .exam{
-  margin-bottom: 5px;
+  margin-bottom: 0.3em;
 }
 
 .regExam{
-  margin-bottom: 5px;
+  margin-bottom: 0.3em;
 }
 
 .exam button{
-  margin-top: 28px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
 }
 
-.regExam button{
-  margin-top: 18px;
+.container .navbar .material-icons{
+  font-size:2em;
+  margin: 0;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.container .navbar ul{
+  transform: translateX(+12%);
 }

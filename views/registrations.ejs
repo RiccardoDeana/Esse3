@@ -9,11 +9,26 @@
 <div class="fixed-top">
 <%- include('partials/user.ejs'); %>
     <div class="container">
-    <div class="btn-group btn-group-lg w-100">
-        <a class="btn btn-primary" href="/exams">Prenota Esame</a>
-        <a class="btn btn-primary active">Iscrizioni</a>
-        <a class="btn btn-primary" href="/passed">Libretto</a>
-    </div>
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark rounded w-100">
+            <a class="navbar-brand"><i class="material-icons">school</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/exams">Prenota Esame</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/registrations">Iscrizioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/passed">Libretto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </div>
 
@@ -25,10 +40,10 @@
     <% } %>
     <% const date = new Date();%>
     <% for(var i=0; i < locals.myRegistrations.length; i++) {%>
-    <div class="container border border-primary rounded regExam" id=<%=locals.myRegistrations[i]._id%> >
+    <div class="container border border-primary rounded exam" id=<%=locals.myRegistrations[i]._id%> >
         <form method="post">
             <div class="row">
-                <div class="col-7">
+                <div class="col-10">
                     <h3> <%= locals.myRegistrations[i].nomeEsame %> </h3>
                     <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
                     <h5> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h5>

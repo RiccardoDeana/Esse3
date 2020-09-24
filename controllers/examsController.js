@@ -25,6 +25,7 @@ function examsPOST (req, res, next) {
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const id = dati.idEsame;
+    console.log(req.body)
     Exam.decreaseFree(id)
         .then(exam => {
             const date = new Date();

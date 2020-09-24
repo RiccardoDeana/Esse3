@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const Student = require('../models/student');
 const StudentToken = require('../models/studentToken');
+const configErrorRedirect = require('../middleware/configErrorRedirect');
 
 function isLoggedStudent (req, res, next) {
     const token = req.app.locals.token;
@@ -19,34 +20,25 @@ function isLoggedStudent (req, res, next) {
                                             return next();
                                         })
                                         .catch(error => {
-                                            return next(error);
+                                            configErrorRedirect('login',error, req, res);
                                         })
                                 }
                                 return next();
                             })
                             .catch(error => {
-                                return next(error);
+                                configErrorRedirect('login',error, req, res);
                             })
                     })
                     .catch(error => {
-                        return next(error);
+                        configErrorRedirect('login',error, req, res);
                     })
 
             } else {
-                const target = req.app.locals.error || {};
-                Object.assign(target,
-                    {
-                        login: {
-                            msg: 'Sessione scaduta. Per accedere devi eseguire il login',
-                            isErrorValid: true
-                        }
-                    });
-                req.app.locals.error = target;
-                res.redirect('/login');
+                configErrorRedirect('login','Sessione scaduta. Per accedere devi eseguire il login', req, res);
             }
         })
         .catch(error => {
-            return next(error);
+            configErrorRedirect('login',error, req, res);
         })
 }
 

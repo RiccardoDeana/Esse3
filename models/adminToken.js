@@ -14,7 +14,7 @@ const adminTokenSchema = mongoose.Schema({
         dataCreazione: {
             type: Date,
             default: Date.now,
-            expires: 600
+            expires: 1200
         }
     },
     {

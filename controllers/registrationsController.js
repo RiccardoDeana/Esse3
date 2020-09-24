@@ -3,7 +3,7 @@ const configError = require('../middleware/configError');
 
 async function registrationsGET (req, res) {
     const matricola = req.app.locals.matricola;
-    registrations = await Registration.find({studente: matricola});
+    const registrations = await Registration.find({studente: matricola});
     req.app.locals.myRegistrations = registrations;
     res.render('registrations');
 }
@@ -11,7 +11,7 @@ async function registrationsGET (req, res) {
 async function registrationsPOST (req, res) {
     const dati = req.body;
     const id = dati.id;
-    registration = await Registration.findOne({_id:id});
+    const registration = await Registration.findOne({_id:id});
     if(registration){
         const date = new Date();
         if(registration.data.getTime() > date.getTime()) {

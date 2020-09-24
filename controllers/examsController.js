@@ -5,10 +5,10 @@ const configError = require('../middleware/configError');
 
 async function examsGET (req, res) {
     const matricola = req.app.locals.matricola;
-    student = await Student.findOne({matricola});
+    const student = await Student.findOne({matricola});
     if(student){
         const facolta = student.facolta;
-        exams = await Exam.findMyExams(matricola, facolta);
+        const exams = await Exam.findMyExams(matricola, facolta);
         req.app.locals.myExams = exams;
         res.render('exams');
     }
@@ -17,7 +17,7 @@ async function examsGET (req, res) {
 async function examsPOST (req, res) {
     const dati = req.body;
     const id = dati.idEsame;
-    exam = await Exam.decreaseFree(id);
+    const exam = await Exam.decreaseFree(id);
     if(exam){
         const date = new Date();
         if(exam.data.getTime() > date.getTime()){

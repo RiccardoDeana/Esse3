@@ -6,7 +6,7 @@ function remStudentGET (req, res) {
 }
 
 async function remStudentPOST (req, res) {
-    student = await Student.findOne({matricola:req.body.matricola});
+    const student = await Student.findOne({matricola:req.body.matricola});
     if(student){
         await Student.deleteStudent(req.body.matricola);
         res.redirect('/remStudent');

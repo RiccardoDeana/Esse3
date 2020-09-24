@@ -13,7 +13,7 @@ async function regGradePOST (req, res) {
         "voto": req.body.voto,
         "lode": req.body.lode === 'on'
     };
-    registrations = await Registration.find({studente:dati.studente, nomeEsame:dati.esame});
+    const registrations = await Registration.find({studente:dati.studente, nomeEsame:dati.esame});
     if(registrations[0]){
         const passed = new Passed(dati);
         passed.save(function(err){

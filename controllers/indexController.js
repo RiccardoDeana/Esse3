@@ -49,32 +49,22 @@ async function logout (req, res) {
     const token = req.app.locals.token;
     const student = await Student.findOne({matricola: matricola});
     if(student){
-        student.logOut(token)
-            .then(() => {
-                req.app.locals.matricola = undefined;
-                req.app.locals.nome = undefined;
-                req.app.locals.cognome = undefined;
-                req.app.locals.token = undefined;
-                res.redirect('/login');
-            })
-            .catch(error => {
-                configError('login',error, res);
-            })
+        await student.logOut(token)
+            req.app.locals.matricola = undefined;
+            req.app.locals.nome = undefined;
+            req.app.locals.cognome = undefined;
+            req.app.locals.token = undefined;
+            res.redirect('/login');
     }
 
     const admin = await Admin.findOne({matricola: matricola});
     if(admin){
-        admin.logOut(token)
-            .then(() => {
-                req.app.locals.matricola = undefined;
-                req.app.locals.nome = undefined;
-                req.app.locals.cognome = undefined;
-                req.app.locals.token = undefined;
-                res.redirect('/login');
-            })
-            .catch(error => {
-                configError('login',error, res);
-            })
+        await admin.logOut(token)
+            req.app.locals.matricola = undefined;
+            req.app.locals.nome = undefined;
+            req.app.locals.cognome = undefined;
+            req.app.locals.token = undefined;
+            res.redirect('/login');
     }
 }
 

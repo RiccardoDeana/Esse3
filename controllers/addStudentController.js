@@ -6,7 +6,6 @@ function addStudentGET (req, res) {
 }
 
 function addStudentPOST (req, res) {
-    if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const student = new Student(dati);
     student.save(function(err){

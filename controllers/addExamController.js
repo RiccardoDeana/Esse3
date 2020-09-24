@@ -6,7 +6,6 @@ function addExamGET (req, res) {
 }
 
 function addExamPOST (req, res) {
-    if (!req.body) return res.sendStatus(400);
     const dati = {
         "nome": req.body.nome,
         "facolta": req.body.facolta,

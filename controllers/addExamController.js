@@ -1,10 +1,11 @@
 const Exam = require('../models/exam');
+const configError = require('../middleware/configError');
 
-function addExamGET (req, res, next) {
+function addExamGET (req, res) {
     res.render('./addExam');
 }
 
-function addExamPOST (req, res, next) {
+function addExamPOST (req, res) {
     if (!req.body) return res.sendStatus(400);
     const dati = {
         "nome": req.body.nome,
@@ -16,9 +17,7 @@ function addExamPOST (req, res, next) {
     const exam = new Exam(dati);
     exam.save(function(err){
         if(err){
-            const error = new Error('Esame già aggiunto');
-            error.status = 401;
-            return next(error);
+            configError('addExam','Esame già aggiunto', res);
         }else{
             res.redirect('/addExam');
         }

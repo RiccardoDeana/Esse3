@@ -1,7 +1,7 @@
 const Registration = require('../models/registration');
-const Exam = require('../models/exam');
+const configError = require('../middleware/configError');
 
-function registrationsGET (req, res, next) {
+function registrationsGET (req, res) {
     const matricola = req.app.locals.matricola;
     Registration.find({studente: matricola})
         .then((registrations) => {
@@ -9,11 +9,11 @@ function registrationsGET (req, res, next) {
             res.render('registrations');
         })
         .catch(error => {
-            next(error);
+            configError('registrations',error, res);
         });
 }
 
-function registrationsPOST (req, res, next) {
+function registrationsPOST (req, res) {
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const id = dati.id;
@@ -27,20 +27,16 @@ function registrationsPOST (req, res, next) {
                             res.redirect('/registrations');
                         })
                         .catch(error => {
-                            return next(error)
+                            configError('registrations',error, res);
                         });
                 }else{
-                    const error = new Error('Non è possibile annullare iscrizioni passate');
-                    error.status = 401;
-                    return next(error);
+                    configError('registrations','Non è possibile annullare iscrizioni passate', res);
                 }
             }else{
-                const error = new Error('La prenotazione non esiste');
-                error.status = 401;
-                return next(error);
+                configError('registrations', 'La prenotazione non esiste', res);
             }})
         .catch(error => {
-                return next(error);
+            configError('registrations', error, res);
         })
 }
 

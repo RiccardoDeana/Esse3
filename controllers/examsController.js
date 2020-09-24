@@ -1,8 +1,9 @@
 const Student = require('../models/student');
 const Exam = require('../models/exam');
 const Registration = require('../models/registration');
+const configError = require('../middleware/configError');
 
-function examsGET (req, res, next) {
+function examsGET (req, res) {
     const matricola = req.app.locals.matricola;
     Student.findOne({matricola})
         .then((student) => {
@@ -13,15 +14,15 @@ function examsGET (req, res, next) {
                     res.render('exams');
                 })
                 .catch(error => {
-                    next(error);
+                    configError('exams',error, res);
                 });
         })
         .catch(error => {
-            next(error);
+            configError('exams',error, res);
         });
 }
 
-function examsPOST (req, res, next) {
+function examsPOST (req, res) {
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const id = dati.idEsame;
@@ -35,30 +36,24 @@ function examsPOST (req, res, next) {
                         if(err){
                             Exam.increaseFree(id)
                                 .then(() =>{
-                                    const error = new Error('Prenotazione già effettuata');
-                                    error.status = 401;
-                                    return next(error);
+                                    configError('exams','Prenotazione già effettuata', res);
                                 })
                                 .catch(error => {
-                                    return next(error);
+                                    configError('exams',error, res);
                                 });
                         }else{
                             res.redirect('/exams');
                         }
                     })
                 }else{
-                    const error = new Error('Esame scaduto');
-                    error.status = 401;
-                    return next(error);
+                    configError('exams','Esame scaduto', res);
                 }
 
             }else{
-                const error = new Error('Posti esauriti');
-                error.status = 401;
-                return next(error);
+                configError('exams','Posti esauriti', res);
             }
     }).catch(error => {
-        return next(error);
+        configError('exams',error, res);
     });
 
 }

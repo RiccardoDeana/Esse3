@@ -1,6 +1,7 @@
 const Passed = require('../models/passed');
+const configError = require('../middleware/configError');
 
-function passedGET (req, res, next) {
+function passedGET (req, res) {
     const matricola = req.app.locals.matricola;
 
     Passed.find({studente : matricola})
@@ -8,7 +9,7 @@ function passedGET (req, res, next) {
             req.app.locals.myPassed = myPassed;
             res.render('passed');
         }).catch(error => {
-        next(error);
+        configError('passed',error, res);
     });
 }
 

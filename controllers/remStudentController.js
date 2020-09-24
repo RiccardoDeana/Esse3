@@ -1,10 +1,11 @@
 const Student = require('../models/student');
+const configError = require('../middleware/configError');
 
-function remStudentGET (req, res, next) {
+function remStudentGET (req, res) {
     res.render('./remStudent');
 }
 
-function remStudentPOST (req, res, next) {
+function remStudentPOST (req, res) {
     if (!req.body) return res.sendStatus(400);
     Student.findOne({matricola:req.body.matricola})
         .then(student => {
@@ -14,16 +15,16 @@ function remStudentPOST (req, res, next) {
                         res.redirect('/remStudent');
                     })
                     .catch(error => {
-                        return next(error)});
+                        configError('remStudent',error, res);
+                    });
             }
             else{
-                const error = new Error('Lo studente non esiste');
-                error.status = 401;
-                return next(error);
+                configError('remStudent','Lo studente non esiste', res);
             }
         })
         .catch(error => {
-            return next(error)});
+            configError('remStudent',error, res);
+        });
 }
 
 module.exports = {

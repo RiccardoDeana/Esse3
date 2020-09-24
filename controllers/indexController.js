@@ -1,7 +1,8 @@
 const Student = require('../models/student');
 const Admin = require('../models/admin');
+const configError = require('../middleware/configError');
 
-async function firstPage (req, res, next) {
+async function firstPage (req, res) {
     try {
         let studentToken;
         let adminToken;
@@ -31,21 +32,19 @@ async function firstPage (req, res, next) {
         }else if(adminToken){
             res.redirect('/addStudent');
         }else{
-            const error = new Error('Matricola o password errati');
-            error.status = 401;
-            return next(error);
+            configError('login','Matricola o password errati', res);
         }
 
     } catch (error) {
-        next(error);
+        configError('login',error, res);
     }
 }
 
-function loginPage (req, res, next) {
+function loginPage (req, res) {
     res.render('login');
 }
 
-async function logout (req, res, next) {
+async function logout (req, res) {
     matricola = req.app.locals.matricola;
     token = req.app.locals.token;
     const student = await Student.findOne({matricola: matricola});
@@ -59,7 +58,7 @@ async function logout (req, res, next) {
                 res.redirect('/login');
             })
             .catch(error => {
-                return next(error);
+                configError('login',error, res);
             })
     }
 
@@ -74,7 +73,7 @@ async function logout (req, res, next) {
                 res.redirect('/login');
             })
             .catch(error => {
-                return next(error);
+                configError('login',error, res);
             })
     }
 }

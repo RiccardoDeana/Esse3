@@ -1,7 +1,8 @@
 const Passed = require('../models/passed');
 const Registration = require('../models/registration');
+const configError = require('../middleware/configError');
 
-function regGradeGET (req, res, next) {
+function regGradeGET (req, res) {
     res.render('./regGrade');
 }
 
@@ -19,37 +20,21 @@ function regGradePOST (req, res, next) {
                 const passed = new Passed(dati);
                 passed.save(function(err){
                     if(err){
-                        /*
-                        const error = new Error('Dati incongruenti o voto già registrato');
-                        error.status = 401;
-                        return next(error);
-                         */
-                        const target = req.app.locals.error || {};
-                        Object.assign(target,
-                            {
-                                regGrade: {
-                                    msg: 'Dati incongruenti o voto già registrato',
-                                    isErrorValid: true
-                                }
-                            });
-                        req.app.locals.error = target;
-                        res.redirect('/regGrade');
+                        configError('regGrade','Dati incongruenti o voto già registrato', res);
                     }else{
                         Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
                             if(err){
-                                return next(err)
+                                configError('regGrade',err, res);
                             }
                         });
                         res.redirect('/regGrade');
                     }
                 });
             }else{
-                const error = new Error('Lo studente non si è iscritto a questo esame');
-                error.status = 401;
-                return next(error);
+                configError('regGrade','Lo studente non si è iscritto a questo esame', res);
             }
         }).catch(error => {
-            return next(error);
+        configError('regGrade',error, res);
         });
 }
 

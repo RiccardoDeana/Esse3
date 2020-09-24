@@ -68,7 +68,6 @@ examSchema.statics.findMyExams = async (matricola, facolta) => {
     });
 
     return newExams;
-
 };
 
 examSchema.statics.decreaseFree = async (id) => {

@@ -61,12 +61,14 @@ examSchema.statics.findMyExams = async (matricola, facolta) => {
         const nome = exam.nome.toString();
         return !(PassedNames.includes(nome));
     });
+
     const date = new Date();
     const newExams = notRegisteredAndPassed.filter(function(exam){
         return exam.data.getTime() > date.getTime();
     });
 
     return newExams;
+
 };
 
 examSchema.statics.decreaseFree = async (id) => {

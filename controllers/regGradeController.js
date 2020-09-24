@@ -19,9 +19,21 @@ function regGradePOST (req, res, next) {
                 const passed = new Passed(dati);
                 passed.save(function(err){
                     if(err){
+                        /*
                         const error = new Error('Dati incongruenti o voto già registrato');
                         error.status = 401;
                         return next(error);
+                         */
+                        const target = req.app.locals.error || {};
+                        Object.assign(target,
+                            {
+                                regGrade: {
+                                    msg: 'Dati incongruenti o voto già registrato',
+                                    isErrorValid: true
+                                }
+                            });
+                        req.app.locals.error = target;
+                        res.redirect('/regGrade');
                     }else{
                         Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
                             if(err){

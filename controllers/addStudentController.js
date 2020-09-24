@@ -10,9 +10,21 @@ function addStudentPOST (req, res, next) {
     const student = new Student(dati);
     student.save(function(err){
         if(err){
+            /*
             const error = new Error('Studente già aggiunto');
             error.status = 401;
             return next(error);
+             */
+            const target = req.app.locals.error || {};
+            Object.assign(target,
+                {
+                    addStudent: {
+                        msg: 'Studente già aggiunto',
+                        isErrorValid: true
+                    }
+                });
+            req.app.locals.error = target;
+            res.redirect('/addStudent');
         }else{
             res.redirect('/addStudent');
         }

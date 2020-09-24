@@ -6,7 +6,7 @@ function examsGET (req, res, next) {
     const matricola = req.app.locals.matricola;
     Student.findOne({matricola})
         .then((student) => {
-            facolta = student.facolta;
+            const facolta = student.facolta;
             Exam.findMyExams(matricola, facolta)
                 .then((exams) => {
                     req.app.locals.myExams = exams;
@@ -25,7 +25,6 @@ function examsPOST (req, res, next) {
     if (!req.body) return res.sendStatus(400);
     const dati = req.body;
     const id = dati.idEsame;
-    console.log(req.body)
     Exam.decreaseFree(id)
         .then(exam => {
             const date = new Date();
@@ -39,13 +38,14 @@ function examsPOST (req, res, next) {
                                     const error = new Error('Prenotazione già effettuata');
                                     error.status = 401;
                                     return next(error);
-                                }).catch(error => {
-                                return next(error);
-                            });
+                                })
+                                .catch(error => {
+                                    return next(error);
+                                });
                         }else{
                             res.redirect('/exams');
                         }
-                    });
+                    })
                 }else{
                     const error = new Error('Esame scaduto');
                     error.status = 401;

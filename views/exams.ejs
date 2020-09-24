@@ -42,12 +42,16 @@
     <div class="container border border-primary rounded exam" id=<%=locals.myExams[i]._id%> >
         <form method="post">
             <div class="row">
-                <div class="col-10">
+                <div class="col-12">
                     <h3> <%= locals.myExams[i].nome %> </h3>
                     <input type="hidden" name="idEsame" value="<%= locals.myExams[i]._id%>">
                     <input type="hidden" name="nomeEsame" value="<%= locals.myExams[i].nome%>">
                     <input type="hidden" name="studente" value="<%= locals.matricola%>">
                     <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
                     <h5 class> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h5>
                     <h5 class> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h5>
                 </div>

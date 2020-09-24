@@ -21,15 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Grafica responsive con smartphone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/css/administrator.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/administrator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/css/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/student.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600938077614</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Grafica responsive con smartphone">
+      <created>1600940361751</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1600940361751</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,20 +264,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="Grafica responsive con smartphone" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="387" y="-941" key="Vcs.Push.Dialog.v2" timestamp="1600938089587">
+    <state x="387" y="-941" key="Vcs.Push.Dialog.v2" timestamp="1600940366845">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600938089587" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600277637028">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600940366845" />
+    <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600940352626">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600940352626" />
+    <state x="181" y="-841" width="1213" height="801" key="find.popup" timestamp="1600953086134">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="181" y="-841" width="1213" height="801" key="find.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600953086134" />
+    <state x="476" y="-849" key="run.anything.popup" timestamp="1600953813441">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600733257903" />
+    <state x="476" y="-849" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600953813441" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600614722565">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

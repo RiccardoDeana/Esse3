@@ -43,15 +43,19 @@
     <div class="container border border-primary rounded exam" id=<%=locals.myRegistrations[i]._id%> >
         <form method="post">
             <div class="row">
-                <div class="col-10">
+                <div class="col-12">
                     <h3> <%= locals.myRegistrations[i].nomeEsame %> </h3>
                     <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
                     <h5> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h5>
                 </div>
                 <div class="col">
                     <% if(locals.myRegistrations[i].data.getTime() > date.getTime()){ %>
                         <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
-                        <% } %>
+                    <% } %>
                 </div>
             </div>
         </form>

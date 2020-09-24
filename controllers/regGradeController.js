@@ -6,13 +6,13 @@ function regGradeGET (req, res) {
     res.render('./regGrade');
 }
 
-function regGradePOST (req, res, next) {
+function regGradePOST (req, res) {
     if (!req.body) return res.sendStatus(400);
     const dati = {
         "studente": req.body.studente,
         "esame": req.body.esame,
         "voto": req.body.voto,
-        "lode": req.body.lode === 'on' ? true : false
+        "lode": req.body.lode === 'on'
     };
     Registration.find({studente:dati.studente, nomeEsame:dati.esame})
         .then(registrations => {

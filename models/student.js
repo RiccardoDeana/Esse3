@@ -66,8 +66,8 @@ studentSchema.statics.findByCredentials = async (matricola, password) => {
 studentSchema.statics.deleteStudent = async (matricola) => {
     const student = await Student.findOne({matricola:matricola});
     if(student._id){
-        registrations = await mongoose.model('Registration').find({studente : matricola});
-        for(var i = 0; i < registrations.length; i++){
+        const registrations = await mongoose.model('Registration').find({studente : matricola});
+        for(let i = 0; i < registrations.length; i++){
             await mongoose.model('Registration').deleteRegistration(registrations[i]._id);
         }
         await mongoose.model('Passed').deleteMany({studente : matricola});
@@ -78,11 +78,7 @@ studentSchema.statics.deleteStudent = async (matricola) => {
 studentSchema.methods.logOut = async function(token) {
     const student = this;
     const result = await StudentToken.deleteOne({idStudente:student._id, token:token});
-    if(result.deletedCount != 0){
-        return true;
-    }else{
-        return false;
-    }
+    return result.deletedCount != 0;
 };
 
 const Student = mongoose.model('Student', studentSchema);

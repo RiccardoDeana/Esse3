@@ -45,8 +45,8 @@ function loginPage (req, res) {
 }
 
 async function logout (req, res) {
-    matricola = req.app.locals.matricola;
-    token = req.app.locals.token;
+    const matricola = req.app.locals.matricola;
+    const token = req.app.locals.token;
     const student = await Student.findOne({matricola: matricola});
     if(student){
         student.logOut(token)

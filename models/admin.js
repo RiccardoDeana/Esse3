@@ -52,11 +52,7 @@ adminSchema.methods.generateAuthToken = async function() {
 adminSchema.methods.logOut = async function(token) {
     const admin = this;
     const result = await AdminToken.deleteOne({idAdmin:admin._id, token:token});
-    if(result.deletedCount != 0){
-        return true;
-    }else{
-        return false;
-    }
+    return result.deletedCount !== 0;
 };
 
 

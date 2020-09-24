@@ -1,4 +1,4 @@
-function configErrorRedirect (page, errorMessage, req, res) {
+function errorRedirect (page, errorMessage, req, res) {
         const target = req.app.locals.error || {};
         Object.assign(target,
             {
@@ -11,4 +11,4 @@ function configErrorRedirect (page, errorMessage, req, res) {
         res.redirect('/' + page);
 }
 
-module.exports = configErrorRedirect;
+module.exports = errorRedirect;

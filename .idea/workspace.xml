@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Risolti messaggi di errore">
-      <change afterPath="$PROJECT_DIR$/middleware/configErrorRedirect.js" afterDir="false" />
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Migliorati i messaggi di sessione scaduta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configErrorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/ErrorRedirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/adminToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/adminToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/studentToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/studentToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600965078336</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Migliorati i messaggi di sessione scaduta">
+      <created>1600966712774</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1600966712774</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,18 +282,19 @@
     <MESSAGE value="Token in tabelle separate, che si autodistruggono dopo 10min" />
     <MESSAGE value="Risolto doppio token" />
     <MESSAGE value="Risolti messaggi di errore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Risolti messaggi di errore" />
+    <MESSAGE value="Migliorati i messaggi di sessione scaduta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migliorati i messaggi di sessione scaduta" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="125" key="MultipleFileMergeDialog" timestamp="1600879972496">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1600879972496" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600965083361">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600966717126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600965083361" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600966717126" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600860380287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

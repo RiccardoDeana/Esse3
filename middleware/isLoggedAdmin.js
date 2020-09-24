@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const Admin = require('../models/admin');
 const AdminToken = require('../models/adminToken');
-const configErrorRedirect = require('../middleware/configErrorRedirect');
+const ErrorRedirect = require('./ErrorRedirect');
 
 function isLoggedAdmin (req, res, next) {
     const token = req.app.locals.token;
@@ -20,25 +20,25 @@ function isLoggedAdmin (req, res, next) {
                                             return next();
                                         })
                                         .catch(error => {
-                                            configErrorRedirect('login',error, req, res);
+                                            ErrorRedirect('login',error, req, res);
                                         })
                                 }
                                 return next();
                             })
                             .catch(error => {
-                                configErrorRedirect('login',error, req, req, res);
+                                ErrorRedirect('login',error, req, req, res);
                             })
                     })
                     .catch(error => {
-                        configErrorRedirect('login',error, req, res);
+                        ErrorRedirect('login',error, req, res);
                     })
 
             } else {
-                configErrorRedirect('login','Sessione scaduta. Per accedere devi eseguire il login', req, res);
+                ErrorRedirect('login','Sessione scaduta. Per accedere devi eseguire il login', req, res);
             }
         })
         .catch(error => {
-            configErrorRedirect('login',error, req, res);
+            ErrorRedirect('login',error, req, res);
         })
 }
 

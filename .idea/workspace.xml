@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Migliorati i messaggi di sessione scaduta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/configErrorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/ErrorRedirect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600966712774</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Migliorati i messaggi di sessione scaduta">
+      <created>1600967228034</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1600967228034</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,11 +296,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1600879972496" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600966717126">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1600967234446">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600966717126" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600967234446" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600860380287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

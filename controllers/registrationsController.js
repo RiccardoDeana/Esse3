@@ -6,7 +6,7 @@ const configError = require('../middleware/configError');
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
     const matricola = req.app.locals.matricola;
-    const registrations = await Registration.find({studente: matricola});
+    const registrations = await Registration.find({studente: matricola}).sort({data: 'descending'});
     req.app.locals.myRegistrations = registrations;
     res.render('registrations');
 }

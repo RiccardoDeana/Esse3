@@ -38,6 +38,7 @@
 <div class="container">
     <form class="form-admin" method="post">
         <h2 class="text-center">Registra Voto</h2>
+        <%- include('partials/error.ejs', {action: 'regGrade'})%>
         <div class="form-group">
             <label for="studente">Matricola studente:</label>
             <input type="number" class="form-control" id="studente" name="studente" min="10000" max="9999999" required autofocus>
@@ -62,7 +63,6 @@
             <button type="submit" class="btn btn-lg btn-primary">Registra</button>
         </div>
     </form>
-    <%- include('partials/error.ejs', {action: 'regGrade'})%>
 </div>
 </body>
 </html>

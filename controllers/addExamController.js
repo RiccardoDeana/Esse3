@@ -1,11 +1,16 @@
+// controllers/addExamController.js
+
 const Exam = require('../models/exam');
 const configError = require('../middleware/configError');
 
-function addExamGET (req, res) {
+// Renderizza la pagina per aggiungere un esame
+async function addExamGET (req, res) {
     res.render('./addExam');
 }
 
-function addExamPOST (req, res) {
+// Aggiunge un esame
+// verificando che non sia già inserito
+async function addExamPOST (req, res) {
     const dati = {
         "nome": req.body.nome,
         "facolta": req.body.facolta,
@@ -14,7 +19,7 @@ function addExamPOST (req, res) {
         "data": req.body.data
     };
     const exam = new Exam(dati);
-    exam.save(function(err){
+    await exam.save(function(err){
         if(err){
             configError('addExam','Esame già aggiunto', res);
         }else{

@@ -1,6 +1,9 @@
+// controllers/registrationsController.js
+
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
 
+// Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
     const matricola = req.app.locals.matricola;
     const registrations = await Registration.find({studente: matricola});
@@ -8,6 +11,7 @@ async function registrationsGET (req, res) {
     res.render('registrations');
 }
 
+// Annulla le iscrizioni
 async function registrationsPOST (req, res) {
     const dati = req.body;
     const id = dati.id;

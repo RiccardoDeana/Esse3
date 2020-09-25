@@ -1,3 +1,7 @@
+<!-- views/addExam.ejs -->
+<!-- Pagina per aggiungere nuovi esami -->
+<!-- Accessibile solo all'amministratore -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +44,7 @@
 <div class="container">
     <form class="form-admin" method="post">
         <h2 class="text-center">Aggiungi Esame</h2>
+        <%- include('partials/error.ejs', {action: 'addExam'})%>
         <div class="form-group">
             <label for="nome">Esame:</label>
             <input type="text" class="form-control" id="nome" name="nome" required autofocus>
@@ -65,7 +70,6 @@
             <button type="submit" class="btn btn-lg btn-primary">Aggiungi</button>
         </div>
     </form>
-    <%- include('partials/error.ejs', {action: 'addExam'})%>
 </div>
 </body>
 </html>

@@ -1,9 +1,10 @@
+// routers/indexRouter.js
+
 const express = require('express');
 const router = express.Router();
 const configClearError = require('../middleware/configClearError');
 
 function indexRouter (controller) {
-
     router.get('/', function(req, res) {
         res.redirect('/login');
     });

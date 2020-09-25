@@ -1,3 +1,5 @@
+// models/exam.js
+
 const mongoose = require('mongoose');
 const Registration = require('./registration');
 const Passed = require('./passed');
@@ -38,19 +40,20 @@ const examSchema = mongoose.Schema({
 
 examSchema.index({nome: 1, facolta: 1, data: 1}, {unique: true});
 
-examSchema.statics.findMyExams = async (matricola, facolta) => {
-
-    const myPassed = await Passed.find({studente: matricola});
-    const PassedNames = myPassed.map(function(passed){
-        return passed.esame;
-    });
+// Restituisce gli esami del corso di studi, escludendo quelli già superati,
+// quelli già prenotati e quelli scaduti.
+examSchema.statics.findMyExams = async function(matricola, facolta) {
+    const exams = await Exam.find({facolta: facolta});
 
     const registrations = await Registration.find({studente: matricola});
     const idRegistrations = registrations.map(function(registration){
         return registration.idEsame;
     });
 
-    const exams = await Exam.find({facolta: facolta});
+    const myPassed = await Passed.find({studente: matricola});
+    const PassedNames = myPassed.map(function(passed){
+        return passed.esame;
+    });
 
     const notRegistered = exams.filter(function(exam){
         const id = exam._id.toString();
@@ -70,14 +73,15 @@ examSchema.statics.findMyExams = async (matricola, facolta) => {
     return newExams;
 };
 
-examSchema.statics.decreaseFree = async (id) => {
-    const exam = await Exam.findOne({_id: id}, function(err, doc){
+// Decrementa i posti disponibili ad un esame
+examSchema.statics.decreaseFree = async function(id) {
+    const exam = await Exam.findOne({_id: id}, async function(err, doc){
         if(err){
             return null;
         }
         if(doc.postiLiberi > 0){
             doc.postiLiberi--;
-            doc.save();
+            await doc.save();
         }
     });
     if (exam.postiLiberi > 0){
@@ -87,17 +91,17 @@ examSchema.statics.decreaseFree = async (id) => {
     }
 };
 
-examSchema.statics.increaseFree = async (id) => {
-    const exam = await Exam.findOne({_id: id}, function(err, doc){
+//Incrementa i posti liberi ad un esame
+examSchema.statics.increaseFree = async function(id) {
+    const exam = await Exam.findOne({_id: id}, async function(err, doc){
         if(err){
             return null;
         }
         if(doc.postiLiberi < doc.postiTot){
             doc.postiLiberi++;
-            doc.save();
+            await doc.save();
         }
     });
-
     if (exam.postiLiberi < exam.postiTot){
         return exam;
     }else{

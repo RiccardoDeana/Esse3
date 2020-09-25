@@ -1,8 +1,13 @@
+// middleware/isLoggedAdmin.js
+
 const jwt = require('jsonwebtoken');
 const Admin = require('../models/admin');
 const AdminToken = require('../models/adminToken');
 const ErrorRedirect = require('./ErrorRedirect');
 
+// Verifica se l'amministratore è loggato
+// in caso affermativo rinnova il roken
+// altrimenti rimanda alla pagina di login
 async function isLoggedAdmin (req, res, next) {
     const token = req.app.locals.token;
     const data = jwt.verify(token, process.env.JWT_KEY);

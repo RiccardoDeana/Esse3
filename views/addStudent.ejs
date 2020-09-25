@@ -1,3 +1,7 @@
+<!-- views/addStudent.ejs -->
+<!-- Pagina per aggiungere nuovi studenti -->
+<!-- Accessibile solo all'amministratore -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +45,7 @@
 <div class="container">
     <form class="form-admin" method="post">
         <h2 class="text-center">Aggiungi Studente</h2>
+        <%- include('partials/error.ejs', {action: 'addStudent'})%>
         <div class="form-row form-group">
             <div class="col">
                 <label for="nome">Nome:</label>
@@ -73,7 +78,6 @@
         </div>
 
     </form>
-    <%- include('partials/error.ejs', {action: 'addStudent'})%>
 </div>
 </body>
 </html>

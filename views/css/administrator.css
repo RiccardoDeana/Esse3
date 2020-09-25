@@ -4,7 +4,7 @@ body {
 }
 
 .form-admin {
-  padding-top: 8em;
+  padding-top: 7.8em;
 }
 
 .form-admin h2{
@@ -12,13 +12,12 @@ body {
 }
 
 .user{
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
+  padding-top: 0.2em;
   background-color: #f5f5f5;
 }
 
 .user h4{
-  padding-top: 0.3em;
+  padding-top: 0.2em;
   padding-right: 1%;
 }
 

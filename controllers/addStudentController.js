@@ -1,14 +1,19 @@
+// controllers/addStudentController.js
+
 const Student = require('../models/student');
 const configError = require('../middleware/configError');
 
-function addStudentGET (req, res) {
+// Renderizza la pagina per aggiungere un nuovo studente
+async function addStudentGET (req, res) {
     res.render('./addStudent');
 }
 
-function addStudentPOST (req, res) {
+// Aggiunge un nuovo studente
+// verificando che la matricola sia unica
+async function addStudentPOST (req, res) {
     const dati = req.body;
     const student = new Student(dati);
-    student.save(function(err){
+    await student.save(function(err){
         if(err){
             configError('addStudent','Studente già aggiunto', res);
         }else{

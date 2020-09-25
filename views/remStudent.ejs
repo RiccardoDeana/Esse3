@@ -1,3 +1,7 @@
+<!-- views/remStudent.ejs -->
+<!-- Pagina per rimuovere gli studenti -->
+<!-- Accessibile solo all'amministratore -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +44,7 @@
 <div class="container">
     <form class="form-admin" method="post">
         <h2 class="text-center">Rimuovi Studente</h2>
+        <%- include('partials/error.ejs', {action: 'remStudent'})%>
         <div class="form-group">
             <label for="matricola">Matricola:</label>
             <input type="number" class="form-control" id="matricola" name="matricola" required autofocus>
@@ -48,7 +53,6 @@
             <button type="submit" class="btn btn-lg btn-primary">Rimuovi</button>
         </div>
     </form>
-    <%- include('partials/error.ejs', {action: 'remStudent'})%>
 </div>
 
 </body>

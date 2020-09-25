@@ -1,8 +1,11 @@
+// controllers/examsController.js
+
 const Student = require('../models/student');
 const Exam = require('../models/exam');
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
 
+// Renderizza la pagina con gli esami prenotabili
 async function examsGET (req, res) {
     const matricola = req.app.locals.matricola;
     const student = await Student.findOne({matricola});
@@ -14,6 +17,8 @@ async function examsGET (req, res) {
     }
 }
 
+// Effettua la prenotazione di un esame
+// controllando la disponibilità dei posti
 async function examsPOST (req, res) {
     const dati = req.body;
     const id = dati.idEsame;
@@ -22,7 +27,7 @@ async function examsPOST (req, res) {
         const date = new Date();
         if(exam.data.getTime() > date.getTime()){
             const registration = new Registration(dati);
-            registration.save(async function(err){
+            await registration.save(async function(err){
                 if(err){
                     await Exam.increaseFree(id);
                     configError('exams','Prenotazione già effettuata', res);
@@ -31,12 +36,12 @@ async function examsPOST (req, res) {
                 }
             })
         }else{
+            await Exam.increaseFree(id);
             configError('exams','Esame scaduto', res);
         }
     }else{
         configError('exams','Posti esauriti', res);
     }
-
 }
 
 module.exports = {

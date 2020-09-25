@@ -1,3 +1,6 @@
+// middleware/configError.js
+
+// Aggiunge il messaggio di errore alla pagina
 function configError (page, errorMessage, res) {
         const target = res.locals.error || {};
         Object.assign(target,

@@ -1,3 +1,5 @@
+// models/student.js
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -36,6 +38,7 @@ const studentSchema = mongoose.Schema({
         collection: 'studenti'
     });
 
+// Crittografa la password prima di salvarla nel database
 studentSchema.pre('save', async function (next) {
     const student = this;
     if (student.isModified('password')) {
@@ -44,7 +47,7 @@ studentSchema.pre('save', async function (next) {
     next()
 });
 
-
+// Genera il token e lo salva nella tabella "token studenti"
 studentSchema.methods.generateAuthToken = async function() {
     const student = this;
     const token = jwt.sign({_id: student._id}, process.env.JWT_KEY);
@@ -53,7 +56,15 @@ studentSchema.methods.generateAuthToken = async function() {
     return token;
 };
 
-studentSchema.statics.findByCredentials = async (matricola, password) => {
+// Cancella il token dalla tabella "token studenti"
+studentSchema.methods.logOut = async function(token) {
+    const student = this;
+    const result = await StudentToken.deleteOne({idStudente:student._id, token:token});
+    return result.deletedCount !== 0;
+};
+
+// Ricerca dello studente con le credenziali
+studentSchema.statics.findByCredentials = async function(matricola, password) {
     const student = await Student.findOne({matricola});
     if (student) {
         const isPasswordMatch = await bcrypt.compare(password, student.password);
@@ -63,7 +74,8 @@ studentSchema.statics.findByCredentials = async (matricola, password) => {
     }
 };
 
-studentSchema.statics.deleteStudent = async (matricola) => {
+// Rimozione dello studente con le sue prenotazioni e il libretto
+studentSchema.statics.deleteStudent = async function(matricola) {
     const student = await Student.findOne({matricola:matricola});
     if(student._id){
         const registrations = await mongoose.model('Registration').find({studente : matricola});
@@ -73,12 +85,6 @@ studentSchema.statics.deleteStudent = async (matricola) => {
         await mongoose.model('Passed').deleteMany({studente : matricola});
         await Student.deleteOne({matricola:matricola});
     }
-};
-
-studentSchema.methods.logOut = async function(token) {
-    const student = this;
-    const result = await StudentToken.deleteOne({idStudente:student._id, token:token});
-    return result.deletedCount != 0;
 };
 
 const Student = mongoose.model('Student', studentSchema);

@@ -1,8 +1,13 @@
+// middleware/isLoggedStudent.js
+
 const jwt = require('jsonwebtoken');
 const Student = require('../models/student');
 const StudentToken = require('../models/studentToken');
 const ErrorRedirect = require('./ErrorRedirect');
 
+// Verifica se lo studente è loggato
+// in caso affermativo rinnova il roken
+// altrimenti rimanda alla pagina di login
 async function isLoggedStudent (req, res, next) {
     const token = req.app.locals.token;
     const data = jwt.verify(token, process.env.JWT_KEY);

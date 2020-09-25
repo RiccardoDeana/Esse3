@@ -1,5 +1,9 @@
+// controllers/passedController.js
+
 const Passed = require('../models/passed');
 
+// Renderizza la pagina con i voti registrati
+// e calcola la media
 async function passedGET (req, res) {
     const matricola = req.app.locals.matricola;
     const myPassed = await Passed.find({studente : matricola})
@@ -13,7 +17,6 @@ async function passedGET (req, res) {
     req.app.locals.mean = mean;
     res.render('passed');
 }
-
 
 module.exports = {
     passedGET

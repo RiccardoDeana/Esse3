@@ -1,3 +1,6 @@
+// middleware/configClearError.js
+
+// Elimina l'errore in caso di refresh della pagina
 function configClearError (page) {
     return function clearErrorMiddleware (req, res, next) {
         if (req.app.locals.error && req.app.locals.error[page]) {

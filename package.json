@@ -1,10 +1,9 @@
 {
   "name": "esse3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Piattaforma per la gestione degli esami e degli studenti universitari.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "env-cmd -f ./.env nodemon app.js"
   },
   "repository": {

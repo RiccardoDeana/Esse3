@@ -1,3 +1,5 @@
+// models/studentToken.js
+
 const mongoose = require('mongoose');
 
 const adminTokenSchema = mongoose.Schema({
@@ -14,7 +16,8 @@ const adminTokenSchema = mongoose.Schema({
         dataCreazione: {
             type: Date,
             default: Date.now,
-            expires: 9000
+            expires: 15 * 60
+            // Il token si autoelimina dopo 15 min
         }
     },
     {

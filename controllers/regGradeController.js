@@ -1,11 +1,17 @@
+// controllers/regGradeController.js
+
 const Passed = require('../models/passed');
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
 
-function regGradeGET (req, res) {
+// Renderizza la pagina per registrare un voto
+async function regGradeGET (req, res) {
     res.render('./regGrade');
 }
 
+// Registra un voto
+// controllando che lo studente sia iscritto all'esame
+// e che il voto sia valido e non già registrato
 async function regGradePOST (req, res) {
     const dati = {
         "studente": req.body.studente,
@@ -16,11 +22,11 @@ async function regGradePOST (req, res) {
     const registrations = await Registration.find({studente:dati.studente, nomeEsame:dati.esame});
     if(registrations[0]){
         const passed = new Passed(dati);
-        passed.save(function(err){
+        await passed.save(async function(err){
             if(err){
                 configError('regGrade','Dati incongruenti o voto già registrato', res);
             }else{
-                Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
+                await Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
                     if(err){
                         configError('regGrade',err, res);
                     }

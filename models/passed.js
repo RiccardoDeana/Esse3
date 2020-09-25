@@ -1,3 +1,5 @@
+// models/passed.js
+
 const mongoose = require('mongoose');
 
 const passedSchema = mongoose.Schema({

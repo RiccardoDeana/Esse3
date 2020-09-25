@@ -1,3 +1,5 @@
+// models/admin.js
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -32,7 +34,7 @@ const adminSchema = mongoose.Schema({
         collection: 'amministratori'
     });
 
-
+// Crittografa la password prima di salvarla nel database
 adminSchema.pre('save', async function (next) {
     const admin = this;
     if (admin.isModified('password')) {
@@ -41,6 +43,7 @@ adminSchema.pre('save', async function (next) {
     next()
 });
 
+// Genera il token e lo salva nella tabella "token amministratori"
 adminSchema.methods.generateAuthToken = async function() {
     const admin = this;
     const token = jwt.sign({_id: admin._id}, process.env.JWT_KEY);
@@ -49,14 +52,15 @@ adminSchema.methods.generateAuthToken = async function() {
     return token;
 };
 
+// Cancella il token dalla tabella "token amministratori"
 adminSchema.methods.logOut = async function(token) {
     const admin = this;
     const result = await AdminToken.deleteOne({idAdmin:admin._id, token:token});
     return result.deletedCount !== 0;
 };
 
-
-adminSchema.statics.findByCredentials = async (matricola, password) => {
+// Ricerca dell'amministratore con le credenziali
+adminSchema.statics.findByCredentials = async function(matricola, password) {
     const admin = await Admin.findOne({matricola});
     if (admin) {
         const isPasswordMatch = await bcrypt.compare(password, admin.password);

@@ -11,6 +11,14 @@ function configClearError (page) {
                 req.app.locals.error = {};
             }
         }
+        if (req.app.locals.success && req.app.locals.success[page]) {
+            const isSuccessValid = req.app.locals.success[page].isSuccessValid;
+            if (isSuccessValid) {
+                req.app.locals.success[page].isSuccessValid = false;
+            } else {
+                req.app.locals.success = {};
+            }
+        }
         next();
     };
 }

@@ -1,0 +1,8 @@
+<!-- views/partials/error.ejs -->
+<!-- Visualizza errori nelle pagine -->
+
+<% if (locals.success && locals.success[action]) { %>
+    <div class="alert alert-success text-center" role="alert">
+        <%= locals.success[action].msg %>
+    </div>
+<% } %>

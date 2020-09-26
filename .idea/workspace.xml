@@ -19,12 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="snellito il codice usando async/await">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Migliorati i messaggi di sessione scaduta">
+      <change afterPath="$PROJECT_DIR$/middleware/configSuccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/success.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_16_54__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_16_54__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_20_22__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_20_22__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/exam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configClearError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configClearError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +73,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
-      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ricca\Desktop\Esse3\views\partials" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middleware" />
+      <recent name="C:\Users\Pigi\Desktop\Progetti AppWeb\Esse3\views\css" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
   </component>
@@ -93,8 +107,7 @@
       <workItem from="1600773107929" duration="6155000" />
       <workItem from="1600844473041" duration="3597000" />
       <workItem from="1600860160731" duration="183000" />
-      <workItem from="1600986527069" duration="4162000" />
-      <workItem from="1601122686393" duration="4015000" />
+      <workItem from="1601019165815" duration="9348000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -208,26 +221,26 @@
       <option name="project" value="LOCAL" />
       <updated>1600854456995</updated>
     </task>
-    <task id="LOCAL-00017" summary="Risolti alcuni warning">
-      <created>1600976601332</created>
+    <task id="LOCAL-00017" summary="Grafica responsive con smartphone">
+      <created>1600938077614</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1600976601332</updated>
+      <updated>1600938077614</updated>
     </task>
-    <task id="LOCAL-00018" summary="snellito il codice usando async/await">
-      <created>1600990105663</created>
+    <task id="LOCAL-00018" summary="Grafica responsive con smartphone">
+      <created>1600940361751</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1600990105663</updated>
+      <updated>1600940361751</updated>
     </task>
-    <task id="LOCAL-00019" summary="snellito il codice usando async/await">
-      <created>1600990258185</created>
+    <task id="LOCAL-00019" summary="Grafica responsive con smartphone">
+      <created>1601017968916</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1600990258185</updated>
+      <updated>1601017968916</updated>
     </task>
     <option name="localTasksCounter" value="20" />
     <servers />
@@ -264,37 +277,34 @@
     <MESSAGE value="Migliorata la cancellazione delle iscrizioni" />
     <MESSAGE value="Sostituito il bottone di logout con metodo post, che è meglio" />
     <MESSAGE value="Rimuovi studente cancella anche i voti  e le iscrizioni" />
-    <MESSAGE value="Risolti alcuni warning" />
-    <MESSAGE value="snellito il codice usando async/await" />
-    <option name="LAST_COMMIT_MESSAGE" value="snellito il codice usando async/await" />
+    <MESSAGE value="Grafica responsive con smartphone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grafica responsive con smartphone" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="86" key="MergeDialog" timestamp="1600872888994">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600872888994" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1600990272254">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="387" y="-941" key="Vcs.Push.Dialog.v2" timestamp="1601017977560">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600990272254" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600872874387">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601017977560" />
+    <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600940352626">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600872874387" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1600976562534">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600940352626" />
+    <state x="181" y="-841" width="1213" height="801" key="find.popup" timestamp="1601025358541">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600976562534" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="181" y="-841" width="1213" height="801" key="find.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601025358541" />
+    <state x="476" y="-849" key="run.anything.popup" timestamp="1600953813441">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1600733257903" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600614722565">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="476" y="-849" key="run.anything.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600953813441" />
+    <state x="486" y="-1010" width="945" height="969" key="search.everywhere.popup" timestamp="1601024501774">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600614722565" />
+    <state x="486" y="-1010" width="945" height="969" key="search.everywhere.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601024501774" />
   </component>
 </project>

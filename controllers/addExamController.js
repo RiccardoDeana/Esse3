@@ -2,6 +2,7 @@
 
 const Exam = require('../models/exam');
 const configError = require('../middleware/configError');
+const configSuccess = require('../middleware/configSuccess');
 
 // Renderizza la pagina per aggiungere un esame
 async function addExamGET (req, res) {
@@ -18,14 +19,20 @@ async function addExamPOST (req, res) {
         "postiLiberi": req.body.posti,
         "data": req.body.data
     };
-    const exam = new Exam(dati);
-    await exam.save(function(err){
-        if(err){
-            configError('addExam','Esame già aggiunto', res);
-        }else{
-            res.redirect('/addExam');
-        }
-    });
+    const date = new Date();
+    if(req.body.data >= date){
+        const exam = new Exam(dati);
+        await exam.save(function(err){
+            if(err){
+                configError('addExam','Esame già aggiunto', res);
+            }else{
+                configSuccess('addExam','Esame aggiunto', res);
+            }
+        });
+    }else{
+        configError('addExam','Non è possibile aggiungere esami scaduti', res);
+    }
+
 }
 
 module.exports = {

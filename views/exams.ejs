@@ -39,6 +39,7 @@
 <div class="container student">
     <h2 class="text-center">Prenota Esame</h2>
     <%- include('partials/error.ejs', {action: 'exams'})%>
+    <%- include('partials/success.ejs', {action: 'exams'})%>
     <% if(locals.myExams.length === 0) {%>
         <h3 class="text-center">Nessun esame disponibile</h3>
     <% } %>

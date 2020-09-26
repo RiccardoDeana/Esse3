@@ -45,6 +45,7 @@
     <form class="form-admin" method="post">
         <h2 class="text-center">Aggiungi Esame</h2>
         <%- include('partials/error.ejs', {action: 'addExam'})%>
+        <%- include('partials/success.ejs', {action: 'addExam'})%>
         <div class="form-group">
             <label for="nome">Esame:</label>
             <input type="text" class="form-control" id="nome" name="nome" required autofocus>

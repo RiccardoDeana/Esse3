@@ -46,6 +46,7 @@
     <form class="form-admin" method="post">
         <h2 class="text-center">Aggiungi Studente</h2>
         <%- include('partials/error.ejs', {action: 'addStudent'})%>
+        <%- include('partials/success.ejs', {action: 'addStudent'})%>
         <div class="form-row form-group">
             <div class="col">
                 <label for="nome">Nome:</label>

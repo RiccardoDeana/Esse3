@@ -3,6 +3,7 @@
 const Passed = require('../models/passed');
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
+const configSuccess = require('../middleware/configSuccess');
 
 // Renderizza la pagina per registrare un voto
 async function regGradeGET (req, res) {
@@ -31,7 +32,7 @@ async function regGradePOST (req, res) {
                         configError('regGrade',err, res);
                     }
                 });
-                res.redirect('/regGrade');
+                configSuccess('regGrade','Voto registrato', res);
             }
         });
     }else{

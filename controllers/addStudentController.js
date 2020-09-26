@@ -2,6 +2,7 @@
 
 const Student = require('../models/student');
 const configError = require('../middleware/configError');
+const configSuccess = require('../middleware/configSuccess');
 
 // Renderizza la pagina per aggiungere un nuovo studente
 async function addStudentGET (req, res) {
@@ -17,7 +18,7 @@ async function addStudentPOST (req, res) {
         if(err){
             configError('addStudent','Studente già aggiunto', res);
         }else{
-            res.redirect('/addStudent');
+            configSuccess('addStudent','Studente aggiunto', res);
         }
     });
 }

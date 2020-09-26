@@ -39,6 +39,7 @@
 <div class="container student">
     <h2 class="text-center">Iscrizioni</h2>
     <%- include('partials/error.ejs', {action: 'registrations'})%>
+    <%- include('partials/success.ejs', {action: 'registrations'})%>
     <% if(locals.myRegistrations.length === 0) {%>
         <h3 class="text-center">Nessuna iscrizione effettuata</h3>
     <% } %>

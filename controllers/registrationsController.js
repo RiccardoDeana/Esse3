@@ -2,6 +2,7 @@
 
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
+const configSuccess = require('../middleware/configSuccess');
 
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
@@ -20,7 +21,7 @@ async function registrationsPOST (req, res) {
         const date = new Date();
         if(registration.data.getTime() > date.getTime()) {
             await Registration.deleteRegistration(id);
-            res.redirect('/registrations');
+            configSuccess('registrations','Iscrizione annullata', res)
         }else{
             configError('registrations','Non è possibile annullare iscrizioni passate', res);
         }

@@ -4,7 +4,7 @@ const Student = require('../models/student');
 const Exam = require('../models/exam');
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const successRedirect = require('../middleware/successRedirect');
 
 // Renderizza la pagina con gli esami prenotabili
 async function examsGET (req, res) {
@@ -33,7 +33,7 @@ async function examsPOST (req, res) {
                     await Exam.increaseFree(id);
                     configError('exams','Prenotazione già effettuata', res);
                 }else{
-                    configSuccess('exams','Prenotazione effettuata', res)
+                    successRedirect('exams','Prenotazione effettuata', req, res)
                 }
             })
         }else{

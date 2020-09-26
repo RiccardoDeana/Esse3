@@ -19,20 +19,14 @@ async function addExamPOST (req, res) {
         "postiLiberi": req.body.posti,
         "data": req.body.data
     };
-    const date = new Date();
-    if(req.body.data >= date){
-        const exam = new Exam(dati);
-        await exam.save(function(err){
-            if(err){
-                configError('addExam','Esame già aggiunto', res);
-            }else{
-                configSuccess('addExam','Esame aggiunto', res);
-            }
-        });
-    }else{
-        configError('addExam','Non è possibile aggiungere esami scaduti', res);
-    }
-
+    const exam = new Exam(dati);
+    await exam.save(function(err){
+        if(err){
+            configError('addExam','Esame già aggiunto', res);
+        }else{
+            configSuccess('addExam','Esame aggiunto', res);
+        }
+    });
 }
 
 module.exports = {

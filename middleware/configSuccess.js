@@ -1,6 +1,6 @@
-// middleware/configError.js
+// middleware/configSuccess.js
 
-// Aggiunge il messaggio di errore alla pagina
+// Aggiunge il messaggio di successo alla pagina
 function configSuccess (page, message, res) {
         const target = res.locals.success || {};
         Object.assign(target,

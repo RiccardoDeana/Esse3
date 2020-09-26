@@ -1,4 +1,4 @@
-// middleware/ErrorRedirect.js
+// middleware/errorRedirect.js
 
 // Reindirizza alla pagina "page" aggiungendo il messaggio di errore
 function errorRedirect (page, errorMessage, req, res) {
@@ -11,7 +11,7 @@ function errorRedirect (page, errorMessage, req, res) {
                 }
             });
         req.app.locals.error = target;
-        res.redirect('/' + page);
+        res.status(400).redirect('/' + page);
 }
 
 module.exports = errorRedirect;

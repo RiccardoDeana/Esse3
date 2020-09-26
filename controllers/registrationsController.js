@@ -2,7 +2,7 @@
 
 const Registration = require('../models/registration');
 const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const successRedirect = require('../middleware/successRedirect');
 
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
@@ -21,9 +21,9 @@ async function registrationsPOST (req, res) {
         const date = new Date();
         if(registration.data.getTime() > date.getTime()) {
             await Registration.deleteRegistration(id);
-            configSuccess('registrations','Iscrizione annullata', res)
+            successRedirect('registrations', 'Iscrizione annullata', req, res)
         }else{
-            configError('registrations','Non è possibile annullare iscrizioni passate', res);
+            configError('registrations', 'Non è possibile annullare iscrizioni passate', res);
         }
     }else{
         configError('registrations', 'La prenotazione non esiste', res);

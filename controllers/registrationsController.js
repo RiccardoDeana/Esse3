@@ -21,7 +21,7 @@ async function registrationsPOST (req, res) {
         const date = new Date();
         if(registration.data.getTime() > date.getTime()) {
             await Registration.deleteRegistration(id);
-            successRedirect('registrations', 'Iscrizione annullata', req, res)
+            successRedirect('registrations', 'Iscrizione annullata', req, res);
         }else{
             configError('registrations', 'Non è possibile annullare iscrizioni passate', res);
         }

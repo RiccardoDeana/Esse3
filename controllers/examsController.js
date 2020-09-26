@@ -33,7 +33,7 @@ async function examsPOST (req, res) {
                     await Exam.increaseFree(id);
                     configError('exams','Prenotazione già effettuata', res);
                 }else{
-                    successRedirect('exams','Prenotazione effettuata', req, res)
+                    successRedirect('exams','Prenotazione effettuata', req, res);
                 }
             })
         }else{

@@ -20,15 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiunti messaggi di successo">
-      <change afterPath="$PROJECT_DIR$/middleware/successRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_16_54__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_16_54__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_20_22__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_09_2020_20_22__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/ErrorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/errorRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configError.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/configSuccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/configSuccess.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/errorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/errorRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/successRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/successRedirect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +100,7 @@
       <workItem from="1601019165815" duration="9348000" />
       <workItem from="1601134210067" duration="729000" />
       <workItem from="1601135131904" duration="1245000" />
+      <workItem from="1601137816747" duration="2053000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>

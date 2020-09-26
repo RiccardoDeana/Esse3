@@ -43,7 +43,7 @@ examSchema.index({nome: 1, facolta: 1, data: 1}, {unique: true});
 // Restituisce gli esami del corso di studi, escludendo quelli già superati,
 // quelli già prenotati e quelli scaduti.
 examSchema.statics.findMyExams = async function(matricola, facolta) {
-    const exams = await Exam.find({facolta: facolta}).sort({data: 'descending'});
+    const exams = await Exam.find({facolta: facolta}).sort({data: 'ascending'});
 
     const registrations = await Registration.find({studente: matricola});
     const idRegistrations = registrations.map(function(registration){

@@ -50,22 +50,22 @@ async function logout (req, res) {
     const token = req.app.locals.token;
     const student = await Student.findOne({matricola: matricola});
     if(student){
-        await student.logOut(token)
-            req.app.locals.matricola = undefined;
-            req.app.locals.nome = undefined;
-            req.app.locals.cognome = undefined;
-            req.app.locals.token = undefined;
-            res.redirect('/login');
+        await student.logOut(token);
+        req.app.locals.matricola = undefined;
+        req.app.locals.nome = undefined;
+        req.app.locals.cognome = undefined;
+        req.app.locals.token = undefined;
+        res.redirect('/login');
     }
 
     const admin = await Admin.findOne({matricola: matricola});
     if(admin){
-        await admin.logOut(token)
-            req.app.locals.matricola = undefined;
-            req.app.locals.nome = undefined;
-            req.app.locals.cognome = undefined;
-            req.app.locals.token = undefined;
-            res.redirect('/login');
+        await admin.logOut(token);
+        req.app.locals.matricola = undefined;
+        req.app.locals.nome = undefined;
+        req.app.locals.cognome = undefined;
+        req.app.locals.token = undefined;
+        res.redirect('/login');
     }
 }
 

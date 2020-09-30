@@ -43,7 +43,7 @@
     <% }else{ %>
         <h3>Media: <%= locals.mean %></h3>
     <%}%>
-    <% for(var i=0; i < locals.myPassed.length; i++) {%>
+    <% for(let i=0; i < locals.myPassed.length; i++) {%>
     <div class="container border border-primary rounded exam" >
         <h3> <%= locals.myPassed[i].esame %> </h3>
         <% if(locals.myPassed[i].lode === true) {%>

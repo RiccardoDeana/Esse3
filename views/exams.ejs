@@ -43,7 +43,7 @@
     <% if(locals.myExams.length === 0) {%>
         <h3 class="text-center">Nessun esame disponibile</h3>
     <% } %>
-    <% for(var i=0; i < locals.myExams.length; i++) {%>
+    <% for(let i=0; i < locals.myExams.length; i++) {%>
     <div class="container border border-primary rounded exam" id=<%=locals.myExams[i]._id%> >
         <form method="post">
             <div class="row">

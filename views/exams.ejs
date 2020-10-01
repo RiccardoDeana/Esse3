@@ -45,7 +45,7 @@
     <% } %>
     <% for(let i=0; i < locals.myExams.length; i++) {%>
     <div class="container border border-primary rounded exam" id=<%=locals.myExams[i]._id%> >
-        <form method="post">
+        <form method="post" action="/exams">
             <div class="row">
                 <div class="col-12">
                     <h3> <%= locals.myExams[i].nome %> </h3>

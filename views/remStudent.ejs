@@ -42,7 +42,7 @@
 </div>
 
 <div class="container">
-    <form class="form-admin" method="post">
+    <form class="form-admin" action="/remStudent" method="post">
         <h2 class="text-center">Rimuovi Studente</h2>
         <%- include('partials/error.ejs', {action: 'remStudent'})%>
         <%- include('partials/success.ejs', {action: 'remStudent'})%>

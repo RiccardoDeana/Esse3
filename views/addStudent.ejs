@@ -43,7 +43,7 @@
 </div>
 
 <div class="container">
-    <form class="form-admin" method="post">
+    <form class="form-admin" action="/addStudent" method="post">
         <h2 class="text-center">Aggiungi Studente</h2>
         <%- include('partials/error.ejs', {action: 'addStudent'})%>
         <%- include('partials/success.ejs', {action: 'addStudent'})%>

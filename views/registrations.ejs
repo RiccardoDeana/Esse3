@@ -46,7 +46,7 @@
     <% const date = new Date();%>
     <% for(let i=0; i < locals.myRegistrations.length; i++) {%>
     <div class="container border border-primary rounded exam" id=<%=locals.myRegistrations[i]._id%> >
-        <form method="post">
+        <form method="post" action="/registrations">
             <div class="row">
                 <div class="col-12">
                     <h3> <%= locals.myRegistrations[i].nomeEsame %> </h3>

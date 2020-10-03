@@ -6,27 +6,35 @@ const successRedirect = require('../middleware/successRedirect');
 
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
-    const matricola = req.app.locals.matricola;
-    const registrations = await Registration.find({studente: matricola}).sort({data: 'descending'});
-    req.app.locals.myRegistrations = registrations;
-    res.render('registrations');
+    try{
+        const matricola = req.app.locals.matricola;
+        const registrations = await Registration.find({studente: matricola}).sort({data: 'descending'});
+        req.app.locals.myRegistrations = registrations;
+        res.render('registrations');
+    }catch (error){
+        console.log(error);
+    }
 }
 
 // Annulla le iscrizioni
 async function registrationsPOST (req, res) {
-    const dati = req.body;
-    const id = dati.id;
-    const registration = await Registration.findOne({_id:id});
-    if(registration){
-        const date = new Date();
-        if(registration.data.getTime() > date.getTime()) {
-            await Registration.deleteRegistration(id);
-            successRedirect('registrations', 'Iscrizione annullata', req, res);
+    try{
+        const dati = req.body;
+        const id = dati.id;
+        const registration = await Registration.findOne({_id:id});
+        if(registration){
+            const date = new Date();
+            if(registration.data.getTime() > date.getTime()) {
+                await Registration.deleteRegistration(id);
+                successRedirect('registrations', 'Iscrizione annullata', req, res);
+            }else{
+                configError('registrations', 'Non è possibile annullare iscrizioni passate', res);
+            }
         }else{
-            configError('registrations', 'Non è possibile annullare iscrizioni passate', res);
+            configError('registrations', 'La prenotazione non esiste', res);
         }
-    }else{
-        configError('registrations', 'La prenotazione non esiste', res);
+    }catch (error){
+        console.log(error);
     }
 }
 

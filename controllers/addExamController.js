@@ -6,27 +6,35 @@ const configSuccess = require('../middleware/configSuccess');
 
 // Renderizza la pagina per aggiungere un esame
 async function addExamGET (req, res) {
-    res.render('./addExam');
+    try{
+        res.render('./addExam');
+    }catch (error){
+        console.log(error);
+    }
 }
 
 // Aggiunge un esame
 // verificando che non sia già inserito
 async function addExamPOST (req, res) {
-    const dati = {
-        "nome": req.body.nome,
-        "facolta": req.body.facolta,
-        "postiTot": req.body.posti,
-        "postiLiberi": req.body.posti,
-        "data": req.body.data
-    };
-    const exam = new Exam(dati);
-    await exam.save(function(err){
-        if(err){
-            configError('addExam','Esame già aggiunto', res);
-        }else{
-            configSuccess('addExam','Esame aggiunto', res);
-        }
-    });
+    try{
+        const dati = {
+            "nome": req.body.nome,
+            "facolta": req.body.facolta,
+            "postiTot": req.body.posti,
+            "postiLiberi": req.body.posti,
+            "data": req.body.data
+        };
+        const exam = new Exam(dati);
+        await exam.save(function(err){
+            if(err){
+                configError('addExam','Esame già aggiunto', res);
+            }else{
+                configSuccess('addExam','Esame aggiunto', res);
+            }
+        });
+    }catch (error){
+        console.log(error);
+    }
 }
 
 module.exports = {

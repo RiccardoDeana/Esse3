@@ -8,6 +8,8 @@ const StudentToken = require('../models/studentToken');
 
 function indexRouter (controller) {
 
+    //Se l'utente è già loggato viene mandato alla pagina opportuna
+    //Altrimenti viene mandato alla pagina di login
     router.get('/', async function(req, res) {
         try{
             const token = req.app.locals.token;

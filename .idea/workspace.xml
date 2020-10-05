@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Relazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/~$lazione.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/~WRL0405.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +100,7 @@
       <workItem from="1601585949365" duration="374000" />
       <workItem from="1601588535163" duration="1006000" />
       <workItem from="1601741275616" duration="464000" />
+      <workItem from="1601910417624" duration="651000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -272,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601906434666</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Relazione">
+      <created>1601908112414</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1601908112414</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,19 +326,20 @@
     <MESSAGE value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
     <MESSAGE value="Aggiornate immagini relazione" />
     <MESSAGE value="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3" />
+    <MESSAGE value="Relazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Relazione" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601906440487">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601908117132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906440487" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601908117132" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601906138642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

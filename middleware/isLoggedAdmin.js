@@ -6,7 +6,7 @@ const AdminToken = require('../models/adminToken');
 const errorRedirect = require('./errorRedirect');
 
 // Verifica se l'amministratore è loggato
-// in caso affermativo rinnova il roken
+// in caso affermativo rinnova il token
 // altrimenti rimanda alla pagina di login
 async function isLoggedAdmin (req, res, next) {
     const token = req.app.locals.token;

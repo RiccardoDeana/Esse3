@@ -6,7 +6,7 @@ const StudentToken = require('../models/studentToken');
 const errorRedirect = require('./errorRedirect');
 
 // Verifica se lo studente è loggato
-// in caso affermativo rinnova il roken
+// in caso affermativo rinnova il token
 // altrimenti rimanda alla pagina di login
 async function isLoggedStudent (req, res, next) {
     const token = req.app.locals.token;

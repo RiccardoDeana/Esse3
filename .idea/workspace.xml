@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiornate immagini relazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/~$lazione.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601905415022</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Aggiornate immagini relazione">
+      <created>1601906150709</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1601906150709</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,24 +298,25 @@
     <MESSAGE value="sostituiti var con let negli ejs" />
     <MESSAGE value="Modificato indexRouter.js: ora tornando alla home (localhost:3000/) non serve rifare il login" />
     <MESSAGE value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
+    <MESSAGE value="Aggiornate immagini relazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiornate immagini relazione" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601905438334">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601906155971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601905438334" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601741279680">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906155971" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601906138642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601741279680" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906138642" />
     <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1601502250000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

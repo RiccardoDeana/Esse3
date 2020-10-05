@@ -2,7 +2,7 @@
 
 const Student = require('../models/student');
 const Admin = require('../models/admin');
-const configError = require('../middleware/configError');
+const configError = require('../messages/configError');
 
 // Permette il login come studente oppure come amministratore
 // indirizzando nella pagina corretta

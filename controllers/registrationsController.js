@@ -1,8 +1,8 @@
 // controllers/registrationsController.js
 
 const Registration = require('../models/registration');
-const configError = require('../middleware/configError');
-const successRedirect = require('../middleware/successRedirect');
+const configError = require('../messages/configError');
+const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {

@@ -2,8 +2,8 @@
 
 const Passed = require('../models/passed');
 const Registration = require('../models/registration');
-const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const configError = require('../messages/configError');
+const configSuccess = require('../messages/configSuccess');
 
 // Renderizza la pagina per registrare un voto
 async function regGradeGET (req, res) {

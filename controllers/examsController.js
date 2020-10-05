@@ -3,8 +3,8 @@
 const Student = require('../models/student');
 const Exam = require('../models/exam');
 const Registration = require('../models/registration');
-const configError = require('../middleware/configError');
-const successRedirect = require('../middleware/successRedirect');
+const configError = require('../messages/configError');
+const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina con gli esami prenotabili
 async function examsGET (req, res) {

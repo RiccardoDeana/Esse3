@@ -1,8 +1,8 @@
 // controllers/addStudentController.js
 
 const Student = require('../models/student');
-const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const configError = require('../messages/configError');
+const configSuccess = require('../messages/configSuccess');
 
 // Renderizza la pagina per aggiungere un nuovo studente
 async function addStudentGET (req, res) {

@@ -21,11 +21,27 @@
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Relazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/~$lazione.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/~WRL0405.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configClearError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/clearMessages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/configError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/configSuccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/configSuccess.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/errorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/errorRedirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/successRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/successRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/addExamRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addExamRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/addStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addStudentRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/examsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/examsRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/regGradeRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/regGradeRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/registrationsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registrationsRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/remStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/remStudentRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,15 +76,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
-      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ricca\Desktop\Esse3\views\partials" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middleware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\middelware" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\student" />
+      <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ricca\Desktop\Esse3\messages" />
+      <recent name="C:\Users\ricca\Desktop\Esse3\views" />
       <recent name="C:\Users\ricca\Desktop\Esse3\views\admin" />
     </key>
   </component>
@@ -100,7 +117,7 @@
       <workItem from="1601585949365" duration="374000" />
       <workItem from="1601588535163" duration="1006000" />
       <workItem from="1601741275616" duration="464000" />
-      <workItem from="1601910417624" duration="651000" />
+      <workItem from="1601910417624" duration="1684000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -284,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601908112414</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Relazione">
+      <created>1601911087788</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601911087788</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,12 +358,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601908117132">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601911101941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601908117132" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601911101941" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601906138642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

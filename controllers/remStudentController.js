@@ -1,8 +1,8 @@
 // controllers/remStudentController.js
 
 const Student = require('../models/student');
-const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const configError = require('../messages/configError');
+const configSuccess = require('../messages/configSuccess');
 
 // Renderizza la pagina per rimuovere uno studente
 async function remStudentGET (req, res) {

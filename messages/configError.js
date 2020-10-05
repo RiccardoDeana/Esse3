@@ -1,4 +1,4 @@
-// middleware/configError.js
+// messages/configError.js
 
 // Aggiunge il messaggio di errore alla pagina
 function configError (page, errorMessage, res) {

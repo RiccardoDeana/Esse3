@@ -3,7 +3,7 @@
 const jwt = require('jsonwebtoken');
 const Admin = require('../models/admin');
 const AdminToken = require('../models/adminToken');
-const errorRedirect = require('./errorRedirect');
+const errorRedirect = require('../messages/errorRedirect');
 
 // Verifica se l'amministratore è loggato
 // in caso affermativo rinnova il token

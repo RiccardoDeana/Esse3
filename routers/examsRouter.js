@@ -2,13 +2,13 @@
 
 const express = require('express');
 const router = express.Router();
-const configClearError = require('../middleware/configClearError');
+const clearMessages = require('../middleware/clearMessages');
 const isLoggedStudent = require('../middleware/isLoggedStudent');
 
 function examsRouter (controller) {
     router.route('/exams')
         .all(isLoggedStudent)
-        .get(configClearError('exams'), controller.examsGET)
+        .get(clearMessages('exams'), controller.examsGET)
         .post(controller.examsPOST);
 
     return router;

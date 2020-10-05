@@ -1,8 +1,8 @@
 // controllers/addExamController.js
 
 const Exam = require('../models/exam');
-const configError = require('../middleware/configError');
-const configSuccess = require('../middleware/configSuccess');
+const configError = require('../messages/configError');
+const configSuccess = require('../messages/configSuccess');
 
 // Renderizza la pagina per aggiungere un esame
 async function addExamGET (req, res) {

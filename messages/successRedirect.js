@@ -1,4 +1,4 @@
-// middleware/successRedirect.js
+// messages/successRedirect.js
 
 // Reindirizza alla pagina "page" aggiungendo il messaggio di successo
 function successRedirect (page, message, req, res) {

@@ -1,8 +1,8 @@
-// middleware/configClearError.js
+// middleware/clearMessages.js
 
 // Elimina l'errore in caso di refresh della pagina
-function configClearError (page) {
-    return function clearErrorMiddleware (req, res, next) {
+function clearMessages (page) {
+    return function clearMessagesMiddleware (req, res, next) {
         if (req.app.locals.error && req.app.locals.error[page]) {
             const isErrorValid = req.app.locals.error[page].isErrorValid;
             if (isErrorValid) {
@@ -23,4 +23,4 @@ function configClearError (page) {
     };
 }
 
-module.exports = configClearError;
+module.exports = clearMessages;

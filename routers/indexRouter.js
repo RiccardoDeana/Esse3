@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const configClearError = require('../middleware/configClearError');
+const clearMessages = require('../middleware/clearMessages');
 const AdminToken = require('../models/adminToken');
 const StudentToken = require('../models/studentToken');
 
@@ -28,7 +28,7 @@ function indexRouter (controller) {
 
     });
 
-    router.get('/login', configClearError('login'), controller.loginPage);
+    router.get('/login', clearMessages('login'), controller.loginPage);
 
     router.post('/login', controller.firstPage);
 

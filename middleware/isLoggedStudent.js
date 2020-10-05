@@ -3,7 +3,7 @@
 const jwt = require('jsonwebtoken');
 const Student = require('../models/student');
 const StudentToken = require('../models/studentToken');
-const errorRedirect = require('./errorRedirect');
+const errorRedirect = require('../messages/errorRedirect');
 
 // Verifica se lo studente è loggato
 // in caso affermativo rinnova il token

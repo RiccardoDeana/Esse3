@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiornate immagini relazione">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601906150709</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3">
+      <created>1601906341244</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1601906341244</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3">
+      <created>1601906434666</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1601906434666</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,19 +313,20 @@
     <MESSAGE value="Modificato indexRouter.js: ora tornando alla home (localhost:3000/) non serve rifare il login" />
     <MESSAGE value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
     <MESSAGE value="Aggiornate immagini relazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiornate immagini relazione" />
+    <MESSAGE value="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601906155971">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601906440487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906155971" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906440487" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601906138642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

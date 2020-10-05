@@ -21,7 +21,7 @@ async function regGradePOST (req, res) {
     try{
         const dati = {
             "studente": req.body.studente,
-            "esame": req.body.esame,
+            "esame": req.body.esame.toUpperCase(),
             "voto": req.body.voto,
             "lode": req.body.lode === 'on'
         };

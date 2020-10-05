@@ -18,7 +18,7 @@ async function addExamGET (req, res) {
 async function addExamPOST (req, res) {
     try{
         const dati = {
-            "nome": req.body.nome,
+            "nome": req.body.nome.toUpperCase(),
             "facolta": req.body.facolta,
             "postiTot": req.body.posti,
             "postiLiberi": req.body.posti,

@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Modificato indexRouter.js: ora tornando alla home (localhost:3000/) non serve rifare il login">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/~$lazione.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601589483127</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)">
+      <created>1601905415022</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1601905415022</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,19 +291,20 @@
     <MESSAGE value="snellito il codice usando async/await" />
     <MESSAGE value="sostituiti var con let negli ejs" />
     <MESSAGE value="Modificato indexRouter.js: ora tornando alla home (localhost:3000/) non serve rifare il login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificato indexRouter.js: ora tornando alla home (localhost:3000/) non serve rifare il login" />
+    <MESSAGE value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Esami convertiti in maiuscolo. Così non c'è il problema della registrazione del voto (case sensitive)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601589494767">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601905438334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601589494767" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601905438334" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601741279680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -19,29 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Relazione">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Nella cartella middleware c'erano dei file con non erano middleware ma gestivano i messagi in modo diverso. Quindi ho fatto una nuova cartella messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/configClearError.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/clearMessages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/configError.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/configError.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/configSuccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/configSuccess.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/errorRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/errorRedirect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/successRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/messages/successRedirect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/addExamRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addExamRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/addStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/addStudentRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/examsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/examsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/regGradeRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/regGradeRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/registrationsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registrationsRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/remStudentRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/remStudentRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +97,8 @@
       <workItem from="1601585949365" duration="374000" />
       <workItem from="1601588535163" duration="1006000" />
       <workItem from="1601741275616" duration="464000" />
-      <workItem from="1601910417624" duration="1684000" />
+      <workItem from="1601910417624" duration="2733000" />
+      <workItem from="1601941287443" duration="1339000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -308,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601911087788</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Nella cartella middleware c'erano dei file con non erano middleware ma gestivano i messagi in modo diverso. Quindi ho fatto una nuova cartella messages">
+      <created>1601913766241</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601913766241</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,28 +339,29 @@
     <MESSAGE value="Aggiornate immagini relazione" />
     <MESSAGE value="Cambiato &quot;30 e lode&quot; con &quot;30L&quot;, così è uguale a esse3" />
     <MESSAGE value="Relazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="Relazione" />
+    <MESSAGE value="Nella cartella middleware c'erano dei file con non erano middleware ma gestivano i messagi in modo diverso. Quindi ho fatto una nuova cartella messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nella cartella middleware c'erano dei file con non erano middleware ma gestivano i messagi in modo diverso. Quindi ho fatto una nuova cartella messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601911101941">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1601913769976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601911101941" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601913769976" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601906138642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601906138642" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1601502250000">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1601913807331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601502250000" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601913807331" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

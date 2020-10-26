@@ -8,24 +8,8 @@ const StudentToken = require('../models/studentToken');
 
 function indexRouter (controller) {
 
-    //Se l'utente è già loggato viene mandato alla pagina opportuna
-    //Altrimenti viene mandato alla pagina di login
     router.get('/', async function(req, res) {
-        try{
-            const token = req.app.locals.token;
-            const student = await StudentToken.findOne({token:token});
-            const admin = await AdminToken.findOne({token:token});
-            if(student){
-                res.redirect('/exams');
-            }else if(admin){
-                res.redirect('/addStudent');
-            }else{
-                res.redirect('/login');
-            }
-        }catch (error){
-            console.log(error);
-        }
-
+        res.redirect('/login');
     });
 
     router.get('/login', clearMessages('login'), controller.loginPage);

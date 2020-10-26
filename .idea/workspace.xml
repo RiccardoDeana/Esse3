@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Impaginazione relazione e piccole correzzioni">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="relazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +92,7 @@
       <workItem from="1600860160731" duration="183000" />
       <workItem from="1600986527069" duration="4162000" />
       <workItem from="1601302992986" duration="1376000" />
-      <workItem from="1601311543923" duration="1871000" />
-      <workItem from="1601368953285" duration="3000" />
-      <workItem from="1601386218982" duration="741000" />
-      <workItem from="1602669515290" duration="859000" />
-      <workItem from="1603177671014" duration="26000" />
-      <workItem from="1603177727136" duration="480000" />
-      <workItem from="1603720438620" duration="631000" />
+      <workItem from="1601311543923" duration="1691000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -232,21 +227,7 @@
       <option name="project" value="LOCAL" />
       <updated>1600990258185</updated>
     </task>
-    <task id="LOCAL-00020" summary="Bozza relazione">
-      <created>1601318210443</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1601318210443</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Impaginazione relazione e piccole correzzioni">
-      <created>1602669553247</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1602669553247</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,30 +264,28 @@
     <MESSAGE value="Rimuovi studente cancella anche i voti  e le iscrizioni" />
     <MESSAGE value="Risolti alcuni warning" />
     <MESSAGE value="snellito il codice usando async/await" />
-    <MESSAGE value="Bozza relazione" />
-    <MESSAGE value="Impaginazione relazione e piccole correzzioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="Impaginazione relazione e piccole correzzioni" />
+    <option name="LAST_COMMIT_MESSAGE" value="snellito il codice usando async/await" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="86" key="MergeDialog" timestamp="1601278833384">
+    <state x="184" y="86" key="MergeDialog" timestamp="1603727949026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601278833384" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1602669575638">
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603727949026" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1600990272254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1600854460399" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602669575638" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603720454219">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600990272254" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603727938605">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1600277637028" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603720454219" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1600976562534">
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603727938605" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1601502250000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600976562534" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601502250000" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1600733257903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

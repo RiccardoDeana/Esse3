@@ -15,7 +15,7 @@ async function examsGET (req, res) {
             const facolta = student.facolta;
             const exams = await Exam.findMyExams(matricola, facolta);
             req.app.locals.myExams = exams;
-            res.render('exams');
+            res.status(200).render('exams');
         }
     }catch (error){
         res.status(400).send(error);

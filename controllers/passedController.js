@@ -16,9 +16,9 @@ async function passedGET (req, res) {
         mean = mean.toFixed(2);
         req.app.locals.myPassed = myPassed;
         req.app.locals.mean = mean;
-        res.render('passed');
+        res.status(200).render('passed');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

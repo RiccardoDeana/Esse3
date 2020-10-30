@@ -10,9 +10,9 @@ async function registrationsGET (req, res) {
         const matricola = req.app.locals.matricola;
         const registrations = await Registration.find({studente: matricola}).sort({data: 'descending'});
         req.app.locals.myRegistrations = registrations;
-        res.render('registrations');
+        res.status(200).render('registrations');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -34,7 +34,7 @@ async function registrationsPOST (req, res) {
             configError('registrations', 'La prenotazione non esiste', res);
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

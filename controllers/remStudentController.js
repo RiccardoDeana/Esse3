@@ -7,9 +7,9 @@ const configSuccess = require('../messages/configSuccess');
 // Renderizza la pagina per rimuovere uno studente
 async function remStudentGET (req, res) {
     try{
-        res.render('./remStudent');
+        res.status(200).render('./remStudent');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -25,7 +25,7 @@ async function remStudentPOST (req, res) {
             configError('remStudent','Lo studente non esiste', res);
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

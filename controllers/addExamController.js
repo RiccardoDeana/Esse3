@@ -7,9 +7,9 @@ const configSuccess = require('../messages/configSuccess');
 // Renderizza la pagina per aggiungere un esame
 async function addExamGET (req, res) {
     try{
-        res.render('./addExam');
+        res.status(200).render('./addExam');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -33,7 +33,7 @@ async function addExamPOST (req, res) {
             }
         });
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

@@ -39,16 +39,16 @@ async function firstPage (req, res) {
             configError('login','Matricola o password errati', res);
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
 // Renderizza la pagina di login
 async function loginPage (req, res) {
     try{
-        res.render('login');
+        res.status(200).render('login');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -77,7 +77,7 @@ async function logout (req, res) {
             res.redirect('/login');
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

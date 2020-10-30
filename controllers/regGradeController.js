@@ -8,9 +8,9 @@ const configSuccess = require('../messages/configSuccess');
 // Renderizza la pagina per registrare un voto
 async function regGradeGET (req, res) {
     try{
-        res.render('./regGrade');
+        res.status(200).render('./regGrade');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -44,7 +44,7 @@ async function regGradePOST (req, res) {
             configError('regGrade','Lo studente non si è iscritto a questo esame', res);
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

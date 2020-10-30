@@ -7,9 +7,9 @@ const configSuccess = require('../messages/configSuccess');
 // Renderizza la pagina per aggiungere un nuovo studente
 async function addStudentGET (req, res) {
     try{
-        res.render('./addStudent');
+        res.status(200).render('./addStudent');
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -27,7 +27,7 @@ async function addStudentPOST (req, res) {
             }
         });
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

@@ -22,7 +22,14 @@
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiunti messaggi di successo(fixed2)">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +102,7 @@
       <workItem from="1601134210067" duration="729000" />
       <workItem from="1601135131904" duration="1245000" />
       <workItem from="1601137816747" duration="2053000" />
+      <workItem from="1604073208490" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>

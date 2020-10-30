@@ -18,7 +18,7 @@ async function examsGET (req, res) {
             res.render('exams');
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 
@@ -49,7 +49,7 @@ async function examsPOST (req, res) {
             configError('exams','Posti esauriti', res);
         }
     }catch (error){
-        console.log(error);
+        res.status(400).send(error);
     }
 }
 

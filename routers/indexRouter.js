@@ -3,8 +3,6 @@
 const express = require('express');
 const router = express.Router();
 const clearMessages = require('../middleware/clearMessages');
-const AdminToken = require('../models/adminToken');
-const StudentToken = require('../models/studentToken');
 
 function indexRouter (controller) {
 

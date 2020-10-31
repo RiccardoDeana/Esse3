@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="COOKIEEEEEEEEEEEEEEEEEEE">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
     </list>
@@ -97,7 +98,8 @@
       <workItem from="1601137816747" duration="2053000" />
       <workItem from="1604073208490" duration="546000" />
       <workItem from="1604080477143" duration="3068000" />
-      <workItem from="1604150294576" duration="10673000" />
+      <workItem from="1604150294576" duration="12400000" />
+      <workItem from="1604176551194" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -253,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604162296717</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione">
+      <created>1604164364261</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1604164364261</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,15 +301,17 @@
     <MESSAGE value="Aggiunti messaggi di successo" />
     <MESSAGE value="Aggiunti status code alle risposte http" />
     <MESSAGE value="COOKIEEEEEEEEEEEEEEEEEEE" />
-    <option name="LAST_COMMIT_MESSAGE" value="COOKIEEEEEEEEEEEEEEEEEEE" />
+    <MESSAGE value="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1604073683916">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1604164375084">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604073683916" />
     <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601017977560" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604164375084" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604162274903">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

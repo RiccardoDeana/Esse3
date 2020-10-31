@@ -16,18 +16,18 @@ async function firstPage (req, res) {
         const student = await Student.findByCredentials(matricola, password);
         if(student){
             studentToken = await student.generateAuthToken();
-            res.cookie('matricola', student.matricola, { signed: true, overwrite: true, maxAge: 900000 });
-            res.cookie('nome', student.nome, { signed: true, overwrite: true, maxAge: 900000 });
-            res.cookie('cognome', student.cognome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('matricola', student.matricola, { signed: true, overwrite: true });
+            res.cookie('nome', student.nome, { signed: true, overwrite: true });
+            res.cookie('cognome', student.cognome, { signed: true, overwrite: true });
             res.cookie('token', studentToken, { signed: true, overwrite: true, maxAge: 900000 });
         }
 
         const admin = await Admin.findByCredentials(matricola, password);
         if(admin){
             adminToken = await admin.generateAuthToken();
-            res.cookie('matricola', admin.matricola, { signed: true, overwrite: true, maxAge: 900000 });
-            res.cookie('nome', admin.nome, { signed: true, overwrite: true, maxAge: 900000 });
-            res.cookie('cognome', admin.cognome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('matricola', admin.matricola, { signed: true, overwrite: true });
+            res.cookie('nome', admin.nome, { signed: true, overwrite: true });
+            res.cookie('cognome', admin.cognome, { signed: true, overwrite: true });
             res.cookie('token', adminToken, { signed: true, overwrite: true, maxAge: 900000 });
         }
 

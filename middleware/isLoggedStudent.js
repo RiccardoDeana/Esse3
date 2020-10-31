@@ -31,7 +31,7 @@ async function isLoggedStudent (req, res, next) {
                 errorRedirect('login', 'Utente non esiste', req, res);
             }
         }else {
-            errorRedirect('login', 'Sessione scaduta. Per accedere devi eseguire il login', req, res);
+            errorRedirect('login', 'Sessione scaduta', req, res);
         }
     }else{
         errorRedirect('login', 'Non sei autorizzato ad accedere a questa risorsa', req, res);

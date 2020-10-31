@@ -2,13 +2,15 @@
 
 const Passed = require('../models/passed');
 const Registration = require('../models/registration');
-const configError = require('../messages/configError');
-const configSuccess = require('../messages/configSuccess');
+const errorRedirect = require('../messages/errorRedirect');
+const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina per registrare un voto
 async function regGradeGET (req, res) {
     try{
-        res.status(200).render('./regGrade');
+        const nome = req.signedCookies.nome;
+        const cognome = req.signedCookies.cognome;
+        res.status(200).render('regGrade', {nome: nome, cognome: cognome});
     }catch (error){
         res.status(400).send(error);
     }
@@ -30,18 +32,18 @@ async function regGradePOST (req, res) {
             const passed = new Passed(dati);
             await passed.save(async function(err){
                 if(err){
-                    configError('regGrade','Dati incongruenti o voto già registrato', res);
+                    errorRedirect('regGrade','Dati incongruenti o voto già registrato', res);
                 }else{
                     await Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
                         if(err){
-                            configError('regGrade',err, res);
+                            errorRedirect('regGrade', err, req, res);
                         }
                     });
-                    configSuccess('regGrade','Voto registrato', res);
+                    successRedirect('regGrade','Voto registrato', req, res);
                 }
             });
         }else{
-            configError('regGrade','Lo studente non si è iscritto a questo esame', res);
+            errorRedirect('regGrade','Lo studente non si è iscritto a questo esame', req, res);
         }
     }catch (error){
         res.status(400).send(error);

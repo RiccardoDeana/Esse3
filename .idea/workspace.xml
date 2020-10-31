@@ -20,7 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiunti status code alle risposte http">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addExamController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addExamController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/addStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/addStudentController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/examsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/examsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/indexController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/passedController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/passedController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regGradeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regGradeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registrationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registrationsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/remStudentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/remStudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/configError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/configSuccess.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/examsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/examsRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/indexRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/indexRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addExam.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addExam.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/addStudent.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/exams.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/exams.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/user.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/passed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/passed.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/regGrade.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/regGrade.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registrations.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registrations.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/remStudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/remStudent.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +121,8 @@
       <workItem from="1601135131904" duration="1245000" />
       <workItem from="1601137816747" duration="2053000" />
       <workItem from="1604073208490" duration="546000" />
+      <workItem from="1604080477143" duration="3068000" />
+      <workItem from="1604150294576" duration="8761000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -294,11 +323,12 @@
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1604065275987" />
     <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600940352626" />
-    <state x="129" y="167" width="863" height="561" key="find.popup" timestamp="1601135922370">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="181" y="238" width="1214" height="802" key="find.popup" timestamp="1604158205773">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="129" y="167" width="863" height="561" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1601135922370" />
     <state x="181" y="-841" width="1213" height="801" key="find.popup/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601025358541" />
+    <state x="181" y="238" width="1214" height="802" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604158205773" />
     <state x="476" y="-849" key="run.anything.popup" timestamp="1600953813441">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

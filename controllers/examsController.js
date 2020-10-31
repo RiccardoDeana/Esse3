@@ -3,19 +3,20 @@
 const Student = require('../models/student');
 const Exam = require('../models/exam');
 const Registration = require('../models/registration');
-const configError = require('../messages/configError');
+const errorRedirect = require('../messages/errorRedirect');
 const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina con gli esami prenotabili
 async function examsGET (req, res) {
     try{
-        const matricola = req.app.locals.matricola;
+        const matricola = req.signedCookies.matricola;
         const student = await Student.findOne({matricola});
         if(student){
             const facolta = student.facolta;
             const exams = await Exam.findMyExams(matricola, facolta);
-            req.app.locals.myExams = exams;
-            res.status(200).render('exams');
+            const nome = req.signedCookies.nome;
+            const cognome = req.signedCookies.cognome;
+            res.status(200).render('exams', {myExams: exams, matricola: matricola, nome: nome, cognome: cognome});
         }
     }catch (error){
         res.status(400).send(error);
@@ -36,17 +37,17 @@ async function examsPOST (req, res) {
                 await registration.save(async function(err){
                     if(err){
                         await Exam.increaseFree(id);
-                        configError('exams','Prenotazione già effettuata', res);
+                        errorRedirect('exams','Prenotazione già effettuata', req, res);
                     }else{
                         successRedirect('exams','Prenotazione effettuata', req, res);
                     }
                 })
             }else{
                 await Exam.increaseFree(id);
-                configError('exams','Esame scaduto', res);
+                errorRedirect('exams','Esame scaduto', req, res);
             }
         }else{
-            configError('exams','Posti esauriti', res);
+            errorRedirect('exams','Posti esauriti', req, res);
         }
     }catch (error){
         res.status(400).send(error);

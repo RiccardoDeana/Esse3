@@ -11,7 +11,7 @@
 
 <body>
 <div class="fixed-top">
-<%- include('partials/user.ejs'); %>
+    <%- include('partials/user.ejs', {nome: nome, cognome: cognome}); %>
     <div class="container user">
         <nav class="navbar navbar-expand-md bg-primary navbar-dark rounded w-100">
             <a class="navbar-brand"><i class="material-icons">school</i></a>
@@ -38,18 +38,18 @@
 
 <div class="container student">
     <h2 class="text-center">Libretto</h2>
-    <% if(locals.myPassed.length === 0) {%>
+    <% if(myPassed.length === 0) {%>
         <h3 class="text-center">Nessun voto registrato</h3>
     <% }else{ %>
-        <h3>Media: <%= locals.mean %></h3>
+        <h3>Media: <%= mean %></h3>
     <%}%>
-    <% for(let i=0; i < locals.myPassed.length; i++) {%>
+    <% for(let i=0; i < myPassed.length; i++) {%>
     <div class="container border border-primary rounded exam" >
-        <h3> <%= locals.myPassed[i].esame %> </h3>
-        <% if(locals.myPassed[i].lode === true) {%>
-            <h5> Valutazione: <%= locals.myPassed[i].voto %>L</h5>
+        <h3> <%= myPassed[i].esame %> </h3>
+        <% if(myPassed[i].lode === true) {%>
+            <h5> Valutazione: <%= myPassed[i].voto %>L</h5>
         <% }else{ %>
-            <h5> Valutazione: <%= locals.myPassed[i].voto %></h5>
+            <h5> Valutazione: <%= myPassed[i].voto %></h5>
         <% } %>
     </div>
     <% } %>

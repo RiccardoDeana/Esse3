@@ -6,7 +6,9 @@ const Passed = require('../models/passed');
 // e calcola la media
 async function passedGET (req, res) {
     try{
-        const matricola = req.app.locals.matricola;
+        const matricola = req.signedCookies.matricola;
+        const nome = req.signedCookies.nome;
+        const cognome = req.signedCookies.cognome;
         const myPassed = await Passed.find({studente : matricola})
         let mean = 0;
         for(let i = 0; i < myPassed.length; i++){
@@ -14,9 +16,7 @@ async function passedGET (req, res) {
         }
         mean = mean / myPassed.length;
         mean = mean.toFixed(2);
-        req.app.locals.myPassed = myPassed;
-        req.app.locals.mean = mean;
-        res.status(200).render('passed');
+        res.status(200).render('passed', {myPassed: myPassed, mean: mean, nome: nome, cognome: cognome});
     }catch (error){
         res.status(400).send(error);
     }

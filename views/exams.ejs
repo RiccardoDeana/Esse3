@@ -11,7 +11,7 @@
 
 <body>
 <div class="fixed-top">
-<%- include('partials/user.ejs'); %>
+<%- include('partials/user.ejs', {nome: nome, cognome: cognome}); %>
     <div class="container user">
         <nav class="navbar navbar-expand-md bg-primary navbar-dark rounded w-100">
             <a class="navbar-brand"><i class="material-icons">school</i></a>
@@ -40,25 +40,25 @@
     <h2 class="text-center">Prenota Esame</h2>
     <%- include('partials/error.ejs', {action: 'exams'})%>
     <%- include('partials/success.ejs', {action: 'exams'})%>
-    <% if(locals.myExams.length === 0) {%>
+    <% if(myExams.length === 0) {%>
         <h3 class="text-center">Nessun esame disponibile</h3>
     <% } %>
-    <% for(let i=0; i < locals.myExams.length; i++) {%>
-    <div class="container border border-primary rounded exam" id=<%=locals.myExams[i]._id%> >
+    <% for(let i=0; i < myExams.length; i++) {%>
+    <div class="container border border-primary rounded exam" id=<%= myExams[i]._id%> >
         <form method="post" action="/exams">
             <div class="row">
                 <div class="col-12">
-                    <h3> <%= locals.myExams[i].nome %> </h3>
-                    <input type="hidden" name="idEsame" value="<%= locals.myExams[i]._id%>">
-                    <input type="hidden" name="nomeEsame" value="<%= locals.myExams[i].nome%>">
-                    <input type="hidden" name="studente" value="<%= locals.matricola%>">
-                    <input type="hidden" name="data" value="<%= locals.myExams[i].data%>">
+                    <h3> <%= myExams[i].nome %> </h3>
+                    <input type="hidden" name="idEsame" value="<%= myExams[i]._id%>">
+                    <input type="hidden" name="nomeEsame" value="<%= myExams[i].nome%>">
+                    <input type="hidden" name="studente" value="<%= matricola%>">
+                    <input type="hidden" name="data" value="<%= myExams[i].data%>">
                 </div>
             </div>
             <div class="row">
                 <div class="col-7">
-                    <h5 class> <%= locals.myExams[i].data.getDate() %>/<%= locals.myExams[i].data.getMonth() + 1 %>/<%= locals.myExams[i].data.getFullYear() %> </h5>
-                    <h5 class> Posti: <%= locals.myExams[i].postiLiberi %> / <%= locals.myExams[i].postiTot %> </h5>
+                    <h5 class> <%= myExams[i].data.getDate() %>/<%= myExams[i].data.getMonth() + 1 %>/<%= myExams[i].data.getFullYear() %> </h5>
+                    <h5 class> Posti: <%= myExams[i].postiLiberi %> / <%= myExams[i].postiTot %> </h5>
                 </div>
                 <div class="col">
                     <button type="submit" class="btn btn-lg btn-primary">Iscriviti</button>

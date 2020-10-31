@@ -2,7 +2,7 @@
 
 const Student = require('../models/student');
 const Admin = require('../models/admin');
-const configError = require('../messages/configError');
+const errorRedirect = require('../messages/errorRedirect');
 
 // Permette il login come studente oppure come amministratore
 // indirizzando nella pagina corretta
@@ -16,19 +16,19 @@ async function firstPage (req, res) {
         const student = await Student.findByCredentials(matricola, password);
         if(student){
             studentToken = await student.generateAuthToken();
-            req.app.locals.matricola = student.matricola;
-            req.app.locals.nome = student.nome;
-            req.app.locals.cognome = student.cognome;
-            req.app.locals.token = studentToken;
+            res.cookie('matricola', student.matricola, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('nome', student.nome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('cognome', student.cognome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('token', studentToken, { signed: true, overwrite: true, maxAge: 900000 });
         }
 
         const admin = await Admin.findByCredentials(matricola, password);
         if(admin){
             adminToken = await admin.generateAuthToken();
-            req.app.locals.matricola = admin.matricola;
-            req.app.locals.nome = admin.nome;
-            req.app.locals.cognome = admin.cognome;
-            req.app.locals.token = adminToken;
+            res.cookie('matricola', admin.matricola, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('nome', admin.nome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('cognome', admin.cognome, { signed: true, overwrite: true, maxAge: 900000 });
+            res.cookie('token', adminToken, { signed: true, overwrite: true, maxAge: 900000 });
         }
 
         if(studentToken) {
@@ -36,7 +36,7 @@ async function firstPage (req, res) {
         }else if(adminToken){
             res.redirect('/addStudent');
         }else{
-            configError('login','Matricola o password errati', res);
+            errorRedirect('login','Matricola o password errati', req, res);
         }
     }catch (error){
         res.status(400).send(error);
@@ -55,25 +55,25 @@ async function loginPage (req, res) {
 // Esegue il logout e riporta alla pagina di login
 async function logout (req, res) {
     try{
-        const matricola = req.app.locals.matricola;
-        const token = req.app.locals.token;
+        const matricola = req.signedCookies.matricola;
+        const token = req.signedCookies.token;
         const student = await Student.findOne({matricola: matricola});
         if(student){
             await student.logOut(token);
-            req.app.locals.matricola = undefined;
-            req.app.locals.nome = undefined;
-            req.app.locals.cognome = undefined;
-            req.app.locals.token = undefined;
+            res.clearCookie('matricola');
+            res.clearCookie('nome');
+            res.clearCookie('cognome');
+            res.clearCookie('token');
             res.redirect('/login');
         }
 
         const admin = await Admin.findOne({matricola: matricola});
         if(admin){
             await admin.logOut(token);
-            req.app.locals.matricola = undefined;
-            req.app.locals.nome = undefined;
-            req.app.locals.cognome = undefined;
-            req.app.locals.token = undefined;
+            res.clearCookie('matricola');
+            res.clearCookie('nome');
+            res.clearCookie('cognome');
+            res.clearCookie('token');
             res.redirect('/login');
         }
     }catch (error){

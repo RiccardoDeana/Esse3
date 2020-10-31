@@ -1,13 +1,15 @@
 // controllers/addExamController.js
 
 const Exam = require('../models/exam');
-const configError = require('../messages/configError');
-const configSuccess = require('../messages/configSuccess');
+const errorRedirect = require('../messages/errorRedirect');
+const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina per aggiungere un esame
 async function addExamGET (req, res) {
     try{
-        res.status(200).render('./addExam');
+        const nome = req.signedCookies.nome;
+        const cognome = req.signedCookies.cognome;
+        res.status(200).render('addExam', {nome: nome, cognome: cognome});
     }catch (error){
         res.status(400).send(error);
     }
@@ -27,9 +29,9 @@ async function addExamPOST (req, res) {
         const exam = new Exam(dati);
         await exam.save(function(err){
             if(err){
-                configError('addExam','Esame già aggiunto', res);
+                errorRedirect('addExam','Esame già aggiunto', req, res);
             }else{
-                configSuccess('addExam','Esame aggiunto', res);
+                successRedirect('addExam','Esame aggiunto', req, res);
             }
         });
     }catch (error){

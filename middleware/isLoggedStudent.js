@@ -9,7 +9,7 @@ const errorRedirect = require('../messages/errorRedirect');
 // in caso affermativo rinnova il token
 // altrimenti rimanda alla pagina di login
 async function isLoggedStudent (req, res, next) {
-    const token = req.app.locals.token;
+    const token = req.signedCookies.token;
     const data = jwt.verify(token, process.env.JWT_KEY);
     const studentToken = await StudentToken.findOne({ idStudente: data._id, token: token});
     if(studentToken) {
@@ -19,19 +19,18 @@ async function isLoggedStudent (req, res, next) {
             if (result) {
                 student.generateAuthToken()
                     .then((tok) => {
-                        req.app.locals.token = tok;
+                        res.cookie('token', tok, { signed: true, overwrite: true, maxAge: 900000 });
                         return next();
                     })
                     .catch(error => {
                         errorRedirect('login',error, req, res);
                     })
             }
-            return next();
         }else {
-            errorRedirect('login','Utente non esiste', req, res);
+            errorRedirect('login', 'Utente non esiste', req, res);
         }
     }else {
-        errorRedirect('login','Sessione scaduta. Per accedere devi eseguire il login', req, res);
+        errorRedirect('login', 'Sessione scaduta. Per accedere devi eseguire il login', req, res);
     }
 }
 

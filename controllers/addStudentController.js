@@ -1,13 +1,15 @@
 // controllers/addStudentController.js
 
 const Student = require('../models/student');
-const configError = require('../messages/configError');
-const configSuccess = require('../messages/configSuccess');
+const errorRedirect = require('../messages/errorRedirect');
+const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina per aggiungere un nuovo studente
 async function addStudentGET (req, res) {
     try{
-        res.status(200).render('./addStudent');
+        const nome = req.signedCookies.nome;
+        const cognome = req.signedCookies.cognome;
+        res.status(200).render('addStudent', {nome: nome, cognome: cognome});
     }catch (error){
         res.status(400).send(error);
     }
@@ -21,9 +23,9 @@ async function addStudentPOST (req, res) {
         const student = new Student(dati);
         await student.save(function(err){
             if(err){
-                configError('addStudent','Studente già aggiunto', res);
+                errorRedirect('addStudent','Studente già aggiunto', req, res);
             }else{
-                configSuccess('addStudent','Studente aggiunto', res);
+                successRedirect('addStudent','Studente aggiunto', req, res);
             }
         });
     }catch (error){

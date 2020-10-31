@@ -7,7 +7,7 @@ const isLoggedStudent = require('../middleware/isLoggedStudent');
 
 function examsRouter (controller) {
     router.route('/exams')
-        .all(isLoggedStudent)
+        .all(isLoggedStudent, )
         .get(clearMessages('exams'), controller.examsGET)
         .post(controller.examsPOST);
 

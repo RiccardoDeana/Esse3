@@ -1,16 +1,17 @@
 // controllers/registrationsController.js
 
 const Registration = require('../models/registration');
-const configError = require('../messages/configError');
+const errorRedirect = require('../messages/errorRedirect');
 const successRedirect = require('../messages/successRedirect');
 
 // Renderizza la pagina con le iscrizioni effettuate
 async function registrationsGET (req, res) {
     try{
-        const matricola = req.app.locals.matricola;
+        const matricola = req.signedCookies.matricola;
+        const nome = req.signedCookies.nome;
+        const cognome = req.signedCookies.cognome;
         const registrations = await Registration.find({studente: matricola}).sort({data: 'descending'});
-        req.app.locals.myRegistrations = registrations;
-        res.status(200).render('registrations');
+        res.status(200).render('registrations', {myRegistrations: registrations, nome: nome, cognome: cognome});
     }catch (error){
         res.status(400).send(error);
     }
@@ -28,10 +29,10 @@ async function registrationsPOST (req, res) {
                 await Registration.deleteRegistration(id);
                 successRedirect('registrations', 'Iscrizione annullata', req, res);
             }else{
-                configError('registrations', 'Non è possibile annullare iscrizioni passate', res);
+                errorRedirect('registrations', 'Non è possibile annullare iscrizioni passate', req, res);
             }
         }else{
-            configError('registrations', 'La prenotazione non esiste', res);
+            errorRedirect('registrations', 'La prenotazione non esiste', req, res);
         }
     }catch (error){
         res.status(400).send(error);

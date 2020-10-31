@@ -11,7 +11,7 @@
 
 <body>
 <div class="fixed-top">
-<%- include('partials/user.ejs'); %>
+    <%- include('partials/user.ejs', {nome: nome, cognome: cognome}); %>
     <div class="container user">
         <nav class="navbar navbar-expand-md bg-primary navbar-dark rounded w-100">
             <a class="navbar-brand"><i class="material-icons">school</i></a>
@@ -40,25 +40,25 @@
     <h2 class="text-center">Iscrizioni</h2>
     <%- include('partials/error.ejs', {action: 'registrations'})%>
     <%- include('partials/success.ejs', {action: 'registrations'})%>
-    <% if(locals.myRegistrations.length === 0) {%>
+    <% if(myRegistrations.length === 0) {%>
         <h3 class="text-center">Nessuna iscrizione effettuata</h3>
     <% } %>
     <% const date = new Date();%>
-    <% for(let i=0; i < locals.myRegistrations.length; i++) {%>
-    <div class="container border border-primary rounded exam" id=<%=locals.myRegistrations[i]._id%> >
+    <% for(let i=0; i < myRegistrations.length; i++) {%>
+    <div class="container border border-primary rounded exam" id=<%=myRegistrations[i]._id%> >
         <form method="post" action="/registrations">
             <div class="row">
                 <div class="col-12">
-                    <h3> <%= locals.myRegistrations[i].nomeEsame %> </h3>
-                    <input type="hidden" name="id" value="<%= locals.myRegistrations[i]._id%>">
+                    <h3> <%= myRegistrations[i].nomeEsame %> </h3>
+                    <input type="hidden" name="id" value="<%= myRegistrations[i]._id%>">
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <h5> <%= locals.myRegistrations[i].data.getDate() %>/<%= locals.myRegistrations[i].data.getMonth() + 1 %>/<%= locals.myRegistrations[i].data.getFullYear() %> </h5>
+                    <h5> <%= myRegistrations[i].data.getDate() %>/<%= myRegistrations[i].data.getMonth() + 1 %>/<%= myRegistrations[i].data.getFullYear() %> </h5>
                 </div>
                 <div class="col">
-                    <% if(locals.myRegistrations[i].data.getTime() > date.getTime()){ %>
+                    <% if(myRegistrations[i].data.getTime() > date.getTime()){ %>
                         <button type="submit" class="btn btn-primary float-right">Annulla iscrizione</button>
                     <% } %>
                 </div>

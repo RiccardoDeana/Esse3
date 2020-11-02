@@ -10,16 +10,21 @@ function indexRouter (controller) {
 
     router.get('/', async function(req, res) {
         try{
-            const token = req.signedCookies.token;
-            const student = await StudentToken.findOne({token: token});
-            const admin = await AdminToken.findOne({token: token});
-            if(student){
-                res.redirect('/exams');
-            }else if(admin){
-                res.redirect('/addStudent');
+            const matricola = req.signedCookies.matricola;
+            if(matricola){
+                const token = req.signedCookies.token;
+                const student = await StudentToken.findOne({token: token});
+                const admin = await AdminToken.findOne({token: token});
+                if(student){
+                    res.redirect('/exams');
+                }else if(admin){
+                    res.redirect('/addStudent');
+                }else{
+                    res.redirect('/login');
+                }
             }else{
                 res.redirect('/login');
-                }
+            }
         }catch (error){
             res.status(400).send(error);
         }

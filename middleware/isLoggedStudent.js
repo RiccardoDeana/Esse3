@@ -34,7 +34,12 @@ async function isLoggedStudent (req, res, next) {
             errorRedirect('login', 'Sessione scaduta', req, res);
         }
     }else{
-        errorRedirect('login', 'Non sei autorizzato ad accedere a questa risorsa', req, res);
+        const matricola = req.signedCookies.matricola;
+        if(matricola){
+            errorRedirect('login', 'Sessione scaduta', req, res);
+        }else{
+            errorRedirect('login', 'Non sei autorizzato ad accedere a questa risorsa', req, res);
+        }
     }
 
 }

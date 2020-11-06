@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Risolto bug che non faceva caricare la pagina se si chiudeva il browser e si riapriva entro 15 minuti">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Relazione e piccola modifica">
       <change afterPath="$PROJECT_DIR$/Relazione/~$lazione.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Relazione/~WRL0721.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2020_19_02__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/isLoggedStudent.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/isLoggedStudent.js" afterDir="false" />
     </list>
@@ -107,7 +104,7 @@
       <workItem from="1604232514451" duration="1214000" />
       <workItem from="1604245598735" duration="1236000" />
       <workItem from="1604316080512" duration="3645000" />
-      <workItem from="1604698688589" duration="2163000" />
+      <workItem from="1604698688589" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -284,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604317847166</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Relazione e piccola modifica">
+      <created>1604701857348</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1604701857348</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,16 +330,17 @@
     <MESSAGE value="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione" />
     <MESSAGE value="Corretto bug scadenza nome cognome" />
     <MESSAGE value="Risolto bug che non faceva caricare la pagina se si chiudeva il browser e si riapriva entro 15 minuti" />
-    <option name="LAST_COMMIT_MESSAGE" value="Risolto bug che non faceva caricare la pagina se si chiudeva il browser e si riapriva entro 15 minuti" />
+    <MESSAGE value="Relazione e piccola modifica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Relazione e piccola modifica" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1604317852129">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1604701865349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604073683916" />
     <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601017977560" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604317852129" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604701865349" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604698689993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

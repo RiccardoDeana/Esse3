@@ -8,7 +8,11 @@ const clearMessages = require('../middleware/clearMessages');
 
 function indexRouter (controller) {
 
+    //Controlla se l'utente è già loggato
+    //in caso affermativo lo manda alla pagina corretta
+    //altrimenti al login
     router.get('/', async function(req, res) {
+
         try{
             const matricola = req.signedCookies.matricola;
             if(matricola){

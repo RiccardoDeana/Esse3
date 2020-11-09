@@ -10,7 +10,6 @@ async function firstPage (req, res) {
     try{
         let studentToken;
         let adminToken;
-
         const {matricola, password} = req.body;
 
         const student = await Student.findByCredentials(matricola, password);

@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Corretto errori relazione e migliorato l'impaginazione">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/relazione.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Relazione/relazione.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Relazione/relazione.pdf" afterDir="false" />
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Aggiunto info per l'accesso dispositivi sulla relazione">
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <workItem from="1604245598735" duration="1236000" />
       <workItem from="1604316080512" duration="1679000" />
       <workItem from="1604934910084" duration="4111000" />
-      <workItem from="1604946423258" duration="683000" />
+      <workItem from="1604946423258" duration="797000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -280,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604851686231</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Aggiunto info per l'accesso dispositivi sulla relazione">
+      <created>1604947733915</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1604947733915</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,16 +327,17 @@
     <MESSAGE value="Risolto un bug che faceva crashare tutto in un caso si tentasse di accedere ad una specifica pagina senza autorizzazione" />
     <MESSAGE value="Corretto bug scadenza nome cognome" />
     <MESSAGE value="Corretto errori relazione e migliorato l'impaginazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corretto errori relazione e migliorato l'impaginazione" />
+    <MESSAGE value="Aggiunto info per l'accesso dispositivi sulla relazione" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunto info per l'accesso dispositivi sulla relazione" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1604851694858">
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2" timestamp="1604947743196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-297.-1080.1920.1040@0.0.1366.728" timestamp="1600326364526" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604073683916" />
     <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601017977560" />
-    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604851694858" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604947743196" />
     <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604946433555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

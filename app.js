@@ -39,12 +39,11 @@ app.use(passedRouter);
 app.use(regGradeRouter);
 app.use(registrationsRouter);
 
-// view engine setup
 app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
-// Errore 404
-app.use(function (req, res){
+app.use(function (req, res) {
+    const err = new Error('Not Found');
     res.status(404).send('404 Not Found');
 });
 

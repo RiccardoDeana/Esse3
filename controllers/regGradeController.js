@@ -32,7 +32,7 @@ async function regGradePOST (req, res) {
             const passed = new Passed(dati);
             await passed.save(async function(err){
                 if(err){
-                    errorRedirect('regGrade','Dati incongruenti o voto già registrato', res);
+                    errorRedirect('regGrade','Dati incongruenti o voto già registrato', req, res);
                 }else{
                     await Registration.deleteMany({studente:dati.studente, nomeEsame:dati.esame}, function (err) {
                         if(err){

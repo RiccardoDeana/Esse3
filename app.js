@@ -6,11 +6,8 @@ const cookieParser = require('cookie-parser')
 const app = express();
 require('./db');
 
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
 app.use(bodyParser.json());
-// parse cookies
 app.use(cookieParser(process.env.SECRET));
 
 const port = process.env.PORT;
@@ -46,18 +43,9 @@ app.use(registrationsRouter);
 app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
-// intercetta l'errore 404 e lo manda all'error handler
-app.use(function (req, res, next) {
-    const err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-    res.status(err.status || 500);
+// Errore 404
+app.use(function (req, res){
+    res.status(404).send('404 Not Found');
 });
 
 app.listen(port, () => {

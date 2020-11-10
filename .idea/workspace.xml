@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Modificato il file app.js">
+      <change afterPath="$PROJECT_DIR$/views/css/error404.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/error404.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/administrator.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/administrator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/signin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/css/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/student.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +109,7 @@
       <workItem from="1604934910084" duration="4111000" />
       <workItem from="1604946423258" duration="1421000" />
       <workItem from="1604998703302" duration="12634000" />
+      <workItem from="1605027794490" duration="1169000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -370,6 +376,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Modificato il file app.js" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1605027828654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605027828654" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1605027828654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605027828654" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1605027828654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605027828654" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1605027828654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605027828654" />
     <state x="184" y="86" key="MergeDialog" timestamp="1605021802834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

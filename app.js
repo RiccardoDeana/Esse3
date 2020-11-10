@@ -42,8 +42,9 @@ app.use(registrationsRouter);
 app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
+// Errore 404
 app.use(function (req, res) {
-    res.status(404).send('404 Not Found');
+    res.status(404).render('error404');
 });
 
 app.listen(port, () => {

@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Modificato il file signin.css">
+    <list default="true" id="2a399dc3-6c17-4d7d-8aed-e63c0130a3be" name="Default Changelist" comment="Modificato il file app.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
@@ -103,7 +103,7 @@
       <workItem from="1604316080512" duration="1679000" />
       <workItem from="1604934910084" duration="4111000" />
       <workItem from="1604946423258" duration="1421000" />
-      <workItem from="1604998703302" duration="12529000" />
+      <workItem from="1604998703302" duration="12634000" />
     </task>
     <task id="LOCAL-00001" summary="Primo commit">
       <created>1600266296964</created>
@@ -315,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605003835649</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Modificato il file app.js">
+      <created>1605022177313</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1605022177313</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +342,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modifiche a file ejs" />
     <MESSAGE value="qualcosa funziona" />
     <MESSAGE value="ci siamo quasi" />
     <MESSAGE value="ancora meglio" />
@@ -360,7 +366,8 @@
     <MESSAGE value="Aggiunto commento con il nome del file di app.js" />
     <MESSAGE value="Aggiunto commenti al file app.js" />
     <MESSAGE value="Modificato il file signin.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificato il file signin.css" />
+    <MESSAGE value="Modificato il file app.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificato il file app.js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="86" key="MergeDialog" timestamp="1605021802834">
@@ -374,12 +381,12 @@
     <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1604073683916" />
     <state x="387" y="-941" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1601017977560" />
     <state x="387" y="139" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605003843780" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605021874917">
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605022148911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1604065275987" />
     <state x="703" y="-683" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1600940352626" />
-    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605021874917" />
+    <state x="703" y="397" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605022148911" />
     <state x="181" y="238" width="1214" height="802" key="find.popup" timestamp="1604177228016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

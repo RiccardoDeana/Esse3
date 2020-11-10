@@ -42,6 +42,7 @@ app.use(passedRouter);
 app.use(regGradeRouter);
 app.use(registrationsRouter);
 
+// view engine setup
 app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
